@@ -1,0 +1,90 @@
+{
+  "en": {
+    "clinicName": "TCM Clinic",
+    "welcome": "Welcome to TCM Clinic",
+    "description": "We provide acupuncture, massage, and herbal medicine services.",
+    "learnMore": "Learn More",
+    "servicesTitle": "Our Services",
+    "services": [
+      { "title": "Acupuncture", "description": "Relieve pain and improve health through acupuncture." },
+      { "title": "Massage", "description": "Traditional massage techniques to relax muscles and improve circulation." },
+      { "title": "Herbal Medicine", "description": "Custom herbal prescriptions based on your body condition." }
+    ],
+    "doctorsTitle": "Our Doctors",
+    "doctors": [
+      {
+        "id": "doctor1",
+        "name": "Dr. Zhang",
+        "title": "Acupuncture Specialist",
+        "bio": "Dr. Zhang has over 20 years of experience in acupuncture and traditional Chinese medicine.",
+        "image": "/images/doctor1.jpg",
+        "fullBio": "Dr. Zhang is a renowned acupuncture specialist with a focus on pain management and chronic conditions. He graduated from Beijing University of Chinese Medicine and has been practicing for over 20 years."
+      },
+      {
+        "id": "doctor2",
+        "name": "Dr. Li",
+        "title": "Herbal Medicine Expert",
+        "bio": "Dr. Li specializes in herbal medicine and has helped thousands of patients improve their health.",
+        "image": "/images/doctor2.jpg",
+        "fullBio": "Dr. Li is an expert in herbal medicine and holistic health. She holds a Ph.D. in Traditional Chinese Medicine and has published numerous research papers on herbal remedies."
+      }
+    ],
+    "contactTitle": "Contact Us",
+    "address": "123 TCM Street, City, Country",
+    "phone": "+123 456 7890",
+    "email": "info@tcmclinic.com",
+    "hours": "Mon-Fri: 9:00 AM - 6:00 PM, Sat: 10:00 AM - 4:00 PM, Sun: Closed",
+    "insurance": "We accept most major insurance plans.",
+    "footerText": "© 2023 TCM Clinic. All rights reserved.",
+    "carouselImages": [
+      "/images/carousel1.jpg",
+      "/images/carousel2.jpg",
+      "/images/carousel3.jpg"
+    ],
+    "home": "Home"
+  },
+  "zh": {
+    "clinicName": "中医诊所",
+    "welcome": "欢迎来到中医诊所",
+    "description": "我们提供针灸、推拿和中药服务。",
+    "learnMore": "了解更多",
+    "servicesTitle": "我们的服务",
+    "services": [
+      { "title": "针灸", "description": "通过针灸缓解疼痛，改善健康。" },
+      { "title": "推拿", "description": "传统推拿手法，放松肌肉，改善血液循环。" },
+      { "title": "中药", "description": "根据个人体质，配制中药方剂。" }
+    ],
+    "doctorsTitle": "我们的医生",
+    "doctors": [
+      {
+        "id": "doctor1",
+        "name": "张医生",
+        "title": "针灸专家",
+        "bio": "张医生拥有 20 多年的针灸和中医经验。",
+        "image": "/images/doctor1.jpg",
+        "fullBio": "张医生是著名的针灸专家，专注于疼痛管理和慢性病治疗。他毕业于北京中医药大学，拥有超过 20 年的临床经验。"
+      },
+      {
+        "id": "doctor2",
+        "name": "李医生",
+        "title": "中药专家",
+        "bio": "李医生专长于中药，已帮助数千名患者改善健康。",
+        "image": "/images/doctor2.jpg",
+        "fullBio": "李医生是中药和整体健康领域的专家。她拥有中医药学博士学位，并发表了多篇关于草药疗法的研究论文。"
+      }
+    ],
+    "contactTitle": "联系我们",
+    "address": "123 中医街, 城市, 国家",
+    "phone": "+123 456 7890",
+    "email": "info@tcmclinic.com",
+    "hours": "周一至周五: 上午 9:00 - 下午 6:00, 周六: 上午 10:00 - 下午 4:00, 周日: 休息",
+    "insurance": "我们接受大多数主要保险计划。",
+    "footerText": "© 2023 中医诊所. 保留所有权利。",
+    "carouselImages": [
+      "/images/carousel1.jpg",
+      "/images/carousel2.jpg",
+      "/images/carousel3.jpg"
+    ],
+    "home": "首页"
+  }
+}

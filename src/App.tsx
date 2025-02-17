@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
+import Hero from './components/Hero';
 import ServicesSection from './components/ServicesSection';
 import DoctorsSection from './components/DoctorsSection';
-import ContactSection from './components/ContactSection';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Doctor from './pages/Doctor';
+import DoctorDetail from './pages/Doctor';
 import { getLanguage } from './i18n';
+
 
 const App: React.FC = () => {
 
@@ -34,15 +35,15 @@ const App: React.FC = () => {
           path="/"
           element={
             <>
-              <HeroSection />
+              <Hero />
               <ServicesSection />
               <DoctorsSection />
-              <ContactSection />
+              <Contact />
               <Footer />
             </>
           }
         />
-        <Route path="/doctor/:name" element={<Doctor />} />
+        <Route path="/doctor/:name" element={<DoctorDetail />} />
       </Routes>
     </Router>
   );

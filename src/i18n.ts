@@ -1,14 +1,16 @@
+
 import data from './assets/data.json';
-import { MultiLanguageData, DataType } from './types/dataTypes';
-import { Language } from './types/languageTypes'; // 导入 Language 类型
+import { Clinic } from './types/Clinic';
+import { ClinicList } from './types/ClinicList';
+import { LanguageType } from './types/LanguageType'; // 导入 Language 类型
 
 // 强制将导入的 data 转换为 MultiLanguageData 类型
-const typedData = data as MultiLanguageData;
+const typedData = data as ClinicList;
 
-let currentLanguage: Language = (localStorage.getItem('language') as Language) || 'en';
+let currentLanguage: LanguageType = (localStorage.getItem('language') as LanguageType) || 'en';
 
 // 设置当前语言
-export const setLanguage = (lang: Language) => {
+export const setLanguage = (lang: LanguageType) => {
   currentLanguage = lang;
   localStorage.setItem('language', lang);
   // 触发自定义事件
@@ -16,11 +18,11 @@ export const setLanguage = (lang: Language) => {
 };
 
 // 获取当前语言
-export const getLanguage = (): Language => {
+export const getLanguage = (): LanguageType => {
   return currentLanguage;
 };
 
 // 获取翻译内容
-export const t = <K extends keyof DataType>(key: K): DataType[K] => {
+export const t = <K extends keyof Clinic>(key: K): Clinic[K] => {
   return typedData[currentLanguage][key];
 };

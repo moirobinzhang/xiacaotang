@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
 import { t } from '../i18n';
 import { Link } from 'react-router-dom';
-import { DoctorType } from '../types/dataTypes';
+import { DoctorType } from '../types/Clinic';
 
 const DoctorsSection: React.FC = () => {
   const doctors = t('doctors') as DoctorType[];

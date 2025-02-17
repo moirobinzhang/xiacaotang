@@ -2,12 +2,12 @@ import React from 'react';
 import { Box, Typography, Container, Grid, Paper } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import { t } from '../i18n';
-import { DoctorType } from '../types/dataTypes';
+import { Doctor } from '../types/Doctor';
 
-const Doctor: React.FC = () => {
+const DoctorDetail: React.FC = () => {
   const { name } = useParams<{ name: string }>();
-  const doctors = t('doctors') as DoctorType[];
-  const doctor = doctors.find((d: DoctorType) => d.id === name);
+  const doctors = t('doctors') as Doctor[];
+  const doctor = doctors.find((d: Doctor) => d.id === name);
 
   if (!doctor) {
     return <Typography variant="h4">Doctor not found</Typography>;
@@ -39,7 +39,16 @@ const Doctor: React.FC = () => {
                 <strong>{t('address')}</strong>
               </Typography>
               <Typography variant="body1" gutterBottom>
-                <strong>{t('hours')}</strong>
+                <strong>{t('monday')} - {t('friday')} : {t('fulldayhours')} </strong>
+              </Typography>
+              <Typography variant="body1" gutterBottom>
+                <strong>{t('saturday')} : {t('halfdayhours')} </strong>
+              </Typography>
+              <Typography variant="body1" gutterBottom>
+                <strong>{t('sunday')} : {t('closedhours')}</strong>
+              </Typography>
+              <Typography variant="body1" gutterBottom>
+                <strong>{t('appointment')}</strong>
               </Typography>
               <Typography variant="body1" gutterBottom>
                 <strong>{t('insurance')}</strong>
@@ -52,4 +61,4 @@ const Doctor: React.FC = () => {
   );
 };
 
-export default Doctor;
+export default DoctorDetail;

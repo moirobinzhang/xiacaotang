@@ -7,16 +7,22 @@ const Footer: React.FC = () => {
     <Box sx={{ backgroundColor: '#A8C3A2', color: '#333', padding: '20px 0', width: '100%' }}>
       <Container>
         <Typography variant="body1" align="center" gutterBottom>
-          <strong>{t('address')}</strong>
+          <strong>{t('monday')} - {t('friday')} : {t('fulldayhours')} </strong>
         </Typography>
         <Typography variant="body1" align="center" gutterBottom>
-          <strong>{t('hours')}</strong>
+          <strong>{t('saturday')} : {t('halfdayhours')} </strong>
+        </Typography>
+        <Typography variant="body1" align="center" gutterBottom>
+          <strong>{t('sunday')} : {t('closedhours')}</strong>
+        </Typography>
+        <Typography variant="body1" align="center" gutterBottom>
+          <strong>{t('appointment')}</strong>
         </Typography>
         <Typography variant="body1" align="center" gutterBottom>
           <strong>{t('insurance')}</strong>
         </Typography>
         <Typography variant="body1" align="center">
-          {t('footerText')}
+          {t('copyright')} {(new Date().getFullYear())} {t('name')}
         </Typography>
       </Container>
     </Box>

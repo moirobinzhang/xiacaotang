@@ -1,0 +1,6 @@
+export interface Image  {
+    url: string;
+    alt: string;
+    servicename: string;
+    description: string;
+}

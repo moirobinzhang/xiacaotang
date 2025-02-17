@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Typography, Button, Select, MenuItem, SelectChangeEvent } from '@mui/material';
 import { t, setLanguage, getLanguage } from '../i18n';
-import { Language } from '../types/languageTypes';
+import { LanguageType } from '../types/LanguageType';
 
 const Navbar: React.FC = () => {
-  const [language, setLanguageState] = useState<Language>(getLanguage());
+  const [language, setLanguageState] = useState<LanguageType>(getLanguage());
 
   const handleLanguageChange = (event: SelectChangeEvent<string>) => {
-    const newLanguage = event.target.value as Language;
+    const newLanguage = event.target.value as LanguageType;
     setLanguage(newLanguage);
     setLanguageState(newLanguage); // 更新状态以触发重新渲染
   };
@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     <AppBar position="static" sx={{ backgroundColor: '#A8C3A2' }}>
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: '#333' }}>
-          {t('clinicName')}
+          {t('name')}
         </Typography>
         <Button color="inherit" href="/" sx={{ color: '#333', whiteSpace: 'nowrap' }}> {/* 防止文本换行 */}
           {t('home')}

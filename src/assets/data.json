@@ -1,20 +1,16 @@
 {
   "en": {
     "name": "Xia’s Traditional Chinese Medicine",
-   
     "address": "1675 The Chase #24b, Mississauga, ON L5M 5Y7",
     "street": "1675 The Chase #24b",
     "city": "Mississauga",
     "province": "ON",
     "postalcode": "L5M 5Y7",
-
     "phone": "905-848-1552",
     "mobile": "647-408-8263",
     "addresstext": "Address",
     "phonetext": "Phone",
     "mobiletext": "Mobile",
-
-
     "email": "robin.zhang@manoma.com",
     "fulldayhours": "11 AM - 7 PM",
     "halfdayhours": "11 AM - 5 PM",
@@ -28,15 +24,13 @@
     "sunday": "Sunday",
     "appointment": "We take appointment.",
     "insurance": "Accept Company Insurance & Car Insurance.",
-
     "copyright": "Copyright ©",
-
     "carouselImages": [
       {
         "url": "/images/hero-frontdoor.jpg",
         "alt": "Traditional Chinese Medicine",
         "servicename": "tcm",
-        "description": "Traditional Chinese Medicine is a type of holistic, natural health care system that dates back at least 2,000 years to the year 200 B.C."
+        "description": "[NEED_MANUAL_INPUT]"
       },
       {
         "url": "/images/hero-tcm.jpg",
@@ -57,25 +51,20 @@
         "description": "A hearing aid or deaf aid is an electroacoustic device which is designed to amplify sound for the wearer, usually with the aim of making speech more intelligible, and to correct impaired hearing as measured by audiometer. In the United States, Hearing aids are considered medical devices and are regulated by the Food and Drug Administration (FDA). Ordinary small audio amplifiers or other plain sound reinforcing systems cannot be sold as “hearing aids”."
       }
     ],
-
-
-    "description": "We provide acupuncture, massage, and herbal medicine services.",
-    "learnMore": "Learn More",
-    "servicesTitle": "Our Services",
+    "description": "[NEED_MANUAL_INPUT]",
     "services": [
-      { "title": "Acupuncture", "description": "Relieve pain and improve health through acupuncture." },
+      { "title": "Acupuncture", "description": "[NEED_MANUAL_INPUT]" },
       { "title": "Massage", "description": "Traditional massage techniques to relax muscles and improve circulation." },
       { "title": "Herbal Medicine", "description": "Custom herbal prescriptions based on your body condition." }
     ],
-    "doctorsTitle": "Our Doctors",
     "doctors": [
       {
         "id": "doctor1",
-        "name": "Dr. Zhang",
-        "title": "Acupuncture Specialist",
-        "bio": "Dr. Zhang has over 20 years of experience in acupuncture and traditional Chinese medicine.",
-        "image": "/images/doctor1.jpg",
-        "fullBio": "Dr. Zhang is a renowned acupuncture specialist with a focus on pain management and chronic conditions. He graduated from Beijing University of Chinese Medicine and has been practicing for over 20 years."
+        "name": "[NEED_MANUAL_INPUT]",
+        "title": "[NEED_MANUAL_INPUT]",
+        "bio": "[NEED_MANUAL_INPUT]",
+        "image": "[NEED_MANUAL_INPUT]",
+        "fullBio": "[NEED_MANUAL_INPUT]"
       },
       {
         "id": "doctor2",
@@ -87,9 +76,6 @@
       }
     ],
     "contactTitle": "Contact Us",
-    
-    
-
     "home": "Home"
   },
   "zh": {
@@ -105,7 +91,6 @@
     "phonetext": "电话",
     "mobiletext": "手机",
     "email": "robin.zhang@manoma.com",
-    
     "fulldayhours": "11 AM - 7 PM",
     "halfdayhours": "11 AM - 5 PM",
     "closedhours": "Closed",
@@ -119,13 +104,12 @@
     "appointment": "我们接受预约。",
     "insurance": "我们接受公司保险和汽车保险。",
     "copyright": "Copyright ©",
-
     "carouselImages": [
       {
         "url": "/images/hero-frontdoor.jpg",
-        "alt": "Traditional Chinese medicine",
-        "servicename": "中医",
-        "description": "Traditional Chinese Medicine is a type of holistic, natural health care system that dates back at least 2,000 years to the year 200 B.C."
+        "alt": "中医",
+        "servicename": "[NEED_MANUAL_INPUT]",
+        "description": "[NEED_MANUAL_INPUT]"
       },
       {
         "url": "/images/hero-tcm.jpg",
@@ -143,27 +127,23 @@
         "url": "/images/hero-store.jpg",
         "alt": "hearing aid",
         "servicename": "助听器",
-        "description": "A hearing aid or deaf aid is an electroacoustic device which is designed to amplify sound for the wearer, usually with the aim of making speech more intelligible, and to correct impaired hearing as measured by audiometer. In the United States, Hearing aids are considered medical devices and are regulated by the Food and Drug Administration (FDA). Ordinary small audio amplifiers or other plain sound reinforcing systems cannot be sold as “hearing aids”."
+        "description": "A hearing aid or deaf aid is an electroacoustic device which is designed to amplify sound for the wearer, usually with the aim of making speech more intelligible, and to correct impaired hearing as measured by audiometer. In the United States, Hearing aids are considered medical devices and are regulated by the Food and Drug Administration (FDA). Ordinary small audio amplifiers or other plain sound reinforcing systems cannot be sold as “hearing aids”。"
       }
     ],
-
-    "description": "我们提供针灸、推拿和中药服务。",
-    "learnMore": "了解更多",
-    "servicesTitle": "我们的服务",
+    "description": "[NEED_MANUAL_INPUT]",
     "services": [
-      { "title": "针灸", "description": "通过针灸缓解疼痛，改善健康。" },
+      { "title": "针灸", "description": "[NEED_MANUAL_INPUT]" },
       { "title": "推拿", "description": "传统推拿手法，放松肌肉，改善血液循环。" },
       { "title": "中药", "description": "根据个人体质，配制中药方剂。" }
     ],
-    "doctorsTitle": "我们的医生",
     "doctors": [
       {
         "id": "doctor1",
-        "name": "张医生",
-        "title": "针灸专家",
-        "bio": "张医生拥有 20 多年的针灸和中医经验。",
-        "image": "/images/doctor1.jpg",
-        "fullBio": "张医生是著名的针灸专家，专注于疼痛管理和慢性病治疗。他毕业于北京中医药大学，拥有超过 20 年的临床经验。"
+        "name": "[NEED_MANUAL_INPUT]",
+        "title": "[NEED_MANUAL_INPUT]",
+        "bio": "[NEED_MANUAL_INPUT]",
+        "image": "[NEED_MANUAL_INPUT]",
+        "fullBio": "[NEED_MANUAL_INPUT]"
       },
       {
         "id": "doctor2",
@@ -175,9 +155,6 @@
       }
     ],
     "contactTitle": "联系我们",
-    
-
-
     "home": "首页"
   }
 }

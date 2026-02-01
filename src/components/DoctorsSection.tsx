@@ -1,11 +1,10 @@
 import React from 'react';
-import { Box, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
+import { Box, Typography, Grid, Card, CardContent, CardMedia } from '@mui/material';
 import { t } from '../i18n';
-import { Link } from 'react-router-dom';
-import { DoctorType } from '../types/Clinic';
+import { Doctor } from '../types/Doctor';
 
 const DoctorsSection: React.FC = () => {
-  const doctors = t('doctors') as DoctorType[];
+  const doctors = t('doctors') as Doctor[];
 
   return (
     <Box sx={{ padding: '40px 0', width: '100%' }}>
@@ -13,21 +12,21 @@ const DoctorsSection: React.FC = () => {
         {t('doctorsTitle')}
       </Typography>
       <Grid container spacing={4} justifyContent="center">
-        {doctors.map((doctor: DoctorType, index: number) => (
+        {doctors.map((doctor, index) => (
           <Grid item key={index} xs={12} sm={6} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Card sx={{ width: '300px', minWidth: '300px' }}> {/* 设置固定宽度 */}
+            <Card sx={{ width: '300px', minWidth: '300px' }}>
               <CardMedia
                 component="img"
                 height="200"
                 image={doctor.image}
-                alt={doctor.name}
+                alt={doctor.name.en}
               />
               <CardContent>
                 <Typography variant="h5" component="h3" gutterBottom>
-                  {doctor.name}
+                  {doctor.name.en}
                 </Typography>
                 <Typography variant="subtitle1" component="p" gutterBottom>
-                  {doctor.title}
+                  {doctor.title.en}
                 </Typography>
                 <Typography
                   variant="body1"
@@ -39,16 +38,8 @@ const DoctorsSection: React.FC = () => {
                     whiteSpace: 'nowrap',
                   }}
                 >
-                  {doctor.bio}
+                  {doctor.bio.en}
                 </Typography>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  component={Link}
-                  to={`/doctor/${doctor.id}`}
-                >
-                  {t('learnMore')}
-                </Button>
               </CardContent>
             </Card>
           </Grid>

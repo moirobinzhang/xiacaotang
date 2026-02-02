@@ -1,5 +1,49 @@
 {
-  "en": {
+  "services": [
+    {
+      "title": { "en": "Acupuncture", "zh": "针灸治疗" },
+      "description": { "en": "Relieve pain and improve health.", "zh": "缓解疼痛，改善健康。" }
+    },
+    {
+      "title": { "en": "TCM Consultation", "zh": "中医诊疗" },
+      "description": { "en": "Holistic diagnosis and treatment.", "zh": "整体诊断与治疗。" }
+    },
+    {
+      "title": { "en": "Massage/Tui Na", "zh": "推拿按摩" },
+      "description": { "en": "Therapeutic massage for relaxation.", "zh": "放松身心的治疗按摩。" }
+    },
+    {
+      "title": { "en": "Cupping Therapy", "zh": "拔罐疗法" },
+      "description": { "en": "Improve circulation and detoxify.", "zh": "改善循环，排毒养颜。" }
+    },
+    {
+      "title": { "en": "TCM Prescription", "zh": "中药方剂" },
+      "description": { "en": "Customized herbal medicine formulas.", "zh": "定制的草药配方。" }
+    }
+  ],
+  "carouselImages": [
+    {
+      "url": "/images/hero-frontdoor.jpg",
+      "alt": { "en": "Front door of Xiacaotang TCM Clinic", "zh": "夏草堂中医针灸诊所正门" },
+      "description": { "en": "Welcome to Xiacaotang TCM Clinic.", "zh": "欢迎光临夏草堂中医针灸诊所。" }
+    },
+    {
+      "url": "/images/hero_acupuncture.jpg",
+      "alt": { "en": "Acupuncture treatment", "zh": "针灸治疗" },
+      "description": { "en": "Experience the healing power of acupuncture.", "zh": "针灸调理，润泽康宁。" }
+    },
+    {
+      "url": "/images/hero-store.jpg",
+      "alt": { "en": "Herbal medicine store", "zh": "草药商店" },
+      "description": { "en": "Explore our herbal medicine collection.", "zh": "神农遗风，草木本心。" }
+    },
+    {
+      "url": "/images/hero-tcm.jpg",
+      "alt": { "en": "Traditional Chinese Medicine tools", "zh": "中医工具" },
+      "description": { "en": "Discover the art of Traditional Chinese Medicine.", "zh": "传承中医艺术，守护生命健康。" }
+    }
+  ],
+  "clinic": {
     "name": "Xia’s Traditional Chinese Medicine",
     "address": "1675 The Chase #24b, Mississauga, ON L5M 5Y7",
     "street": "1675 The Chase #24b",
@@ -23,78 +67,6 @@
     "saturday": "Saturday",
     "sunday": "Sunday",
     "appointment": "We take appointment.",
-    "insurance": "Accept Company Insurance & Car Insurance.",
-    "copyright": "Copyright ©",
-    "carouselImages": [
-      {
-        "url": "/images/hero-frontdoor.jpg",
-        "alt": "Traditional Chinese Medicine",
-        "servicename": "tcm",
-        "description": "[NEED_MANUAL_INPUT]"
-      }
-    ],
-    "description": "[NEED_MANUAL_INPUT]",
-    "services": [
-      { "title": "Acupuncture", "description": "[NEED_MANUAL_INPUT]" }
-    ],
-    "doctors": [
-      {
-        "id": "doctor1",
-        "name": "[NEED_MANUAL_INPUT]",
-        "title": "[NEED_MANUAL_INPUT]",
-        "bio": "[NEED_MANUAL_INPUT]",
-        "image": "[NEED_MANUAL_INPUT]",
-        "fullBio": "[NEED_MANUAL_INPUT]"
-      }
-    ]
-  },
-  "zh": {
-    "name": "夏草堂",
-    "address": "1675 The Chase #24b, Mississauga, ON L5M 5Y7",
-    "street": "1675 The Chase #24b",
-    "city": "Mississauga",
-    "province": "ON",
-    "postalcode": "L5M 5Y7",
-    "phone": "905-848-1552",
-    "mobile": "647-408-8263",
-    "addresstext": "地址",
-    "phonetext": "电话",
-    "mobiletext": "手机",
-    "email": "robin.zhang@manoma.com",
-    "fulldayhours": "11 AM - 7 PM",
-    "halfdayhours": "11 AM - 5 PM",
-    "closedhours": "Closed",
-    "monday": "周一",
-    "tuesday": "周二",
-    "wednesday": "周三",
-    "thursday": "周四",
-    "friday": "周五",
-    "saturday": "周六",
-    "sunday": "周日",
-    "appointment": "我们接受预约。",
-    "insurance": "我们接受公司保险和汽车保险。",
-    "copyright": "Copyright ©",
-    "carouselImages": [
-      {
-        "url": "/images/hero-frontdoor.jpg",
-        "alt": "中医",
-        "servicename": "[NEED_MANUAL_INPUT]",
-        "description": "[NEED_MANUAL_INPUT]"
-      }
-    ],
-    "description": "[NEED_MANUAL_INPUT]",
-    "services": [
-      { "title": "针灸", "description": "[NEED_MANUAL_INPUT]" }
-    ],
-    "doctors": [
-      {
-        "id": "doctor1",
-        "name": "[NEED_MANUAL_INPUT]",
-        "title": "[NEED_MANUAL_INPUT]",
-        "bio": "[NEED_MANUAL_INPUT]",
-        "image": "[NEED_MANUAL_INPUT]",
-        "fullBio": "[NEED_MANUAL_INPUT]"
-      }
-    ]
+    "insurance": "Accept Company Insurance & Car Insurance."
   }
 }

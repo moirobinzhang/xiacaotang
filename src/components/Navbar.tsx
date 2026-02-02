@@ -1,51 +1,83 @@
-import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, Typography, Button, Select, MenuItem, SelectChangeEvent } from '@mui/material';
-import { t, setLanguage, getLanguage } from '../i18n';
-import { getLocalizedValue } from '../utils/i18nHelper';
-import { LanguageType } from '../types/LanguageType';
+import React, { useState } from 'react';
+import { AppBar, Toolbar, Button, Menu, MenuItem, Box } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const Navbar: React.FC = () => {
-  const [language, setLanguageState] = useState<LanguageType>(getLanguage());
+  const { i18n, t } = useTranslation();
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
-  const handleLanguageChange = (event: SelectChangeEvent<string>) => {
-    const newLanguage = event.target.value as LanguageType;
-    setLanguage(newLanguage);
-    setLanguageState(newLanguage);
+  const handleLanguageChange = (lang: string) => {
+    i18n.changeLanguage(lang); // Update global i18n state
+    setAnchorEl(null);
   };
 
-  useEffect(() => {
-    // Re-render on language change
-  }, [language]);
+  const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#A8C3A2' }}>
-      <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: '#333' }}>
-          {getLocalizedValue(t('name'), language)}
-        </Typography>
-        <Button color="inherit" href="/" sx={{ color: '#333', whiteSpace: 'nowrap' }}>
-          {getLocalizedValue(t('home'), language)}
-        </Button>
-        <Button color="inherit" href="/about" sx={{ color: '#333', whiteSpace: 'nowrap' }}>
-          {getLocalizedValue(t('about'), language)}
-        </Button>
-        <Button color="inherit" href="/services" sx={{ color: '#333', whiteSpace: 'nowrap' }}>
-          {getLocalizedValue(t('services'), language)}
-        </Button>
-        <Button color="inherit" href="/contact" sx={{ color: '#333', whiteSpace: 'nowrap' }}>
-          {getLocalizedValue(t('contact'), language)}
-        </Button>
-        <Button color="inherit" href="/testimonials" sx={{ color: '#333', whiteSpace: 'nowrap' }}>
-          {getLocalizedValue(t('testimonials'), language)}
-        </Button>
-        <Select
-          value={language}
-          onChange={handleLanguageChange}
-          sx={{ color: '#333', ml: 2 }}
-        >
-          <MenuItem value="en">English</MenuItem>
-          <MenuItem value="zh">中文</MenuItem>
-        </Select>
+    <AppBar position="static" sx={{ backgroundColor: '#1a2f23' }}>
+      <Toolbar sx={{ display: 'flex', alignItems: 'center' }}>
+        <img
+          src="/images/logo.png"
+          alt="Logo"
+          style={{ height: '50px', width: 'auto', marginRight: '16px' }}
+        />
+        <Box sx={{ flexGrow: 1 }} />
+        <Box sx={{ display: 'flex', gap: '16px' }}>
+          <Button
+            color="inherit"
+            href="/"
+            sx={{ color: '#fdfaf5', fontSize: '1.1rem', fontWeight: 600, textTransform: 'none', minWidth: 'auto', padding: '0 15px' }}
+          >
+            {t('nav.home')}
+          </Button>
+          <Button
+            color="inherit"
+            href="/about"
+            sx={{ color: '#fdfaf5', fontSize: '1.1rem', fontWeight: 600, textTransform: 'none', minWidth: 'auto', padding: '0 15px' }}
+          >
+            {t('nav.about')}
+          </Button>
+          <Button
+            color="inherit"
+            href="/services"
+            sx={{ color: '#fdfaf5', fontSize: '1.1rem', fontWeight: 600, textTransform: 'none', minWidth: 'auto', padding: '0 15px' }}
+          >
+            {t('nav.services')}
+          </Button>
+          <Button
+            color="inherit"
+            href="/testimonials"
+            sx={{ color: '#fdfaf5', fontSize: '1.1rem', fontWeight: 600, textTransform: 'none', minWidth: 'auto', padding: '0 15px' }}
+          >
+            {t('nav.testimonials')}
+          </Button>
+          <Button
+            color="inherit"
+            href="/contact"
+            sx={{ color: '#fdfaf5', fontSize: '1.1rem', fontWeight: 600, textTransform: 'none', minWidth: 'auto', padding: '0 15px' }}
+          >
+            {t('nav.contact')}
+          </Button>
+        </Box>
+        <div>
+          <Button color="inherit" onClick={handleMenuOpen} sx={{ color: '#fdfaf5' }}>
+            {i18n.language.toUpperCase()}
+          </Button>
+          <Menu
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
+            onClose={handleMenuClose}
+          >
+            <MenuItem onClick={() => handleLanguageChange('en')}>English</MenuItem>
+            <MenuItem onClick={() => handleLanguageChange('zh')}>中文</MenuItem>
+          </Menu>
+        </div>
       </Toolbar>
     </AppBar>
   );

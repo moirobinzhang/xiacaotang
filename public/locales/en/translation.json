@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "testimonials": "Patient Reviews"
+  },
+  "home": {
+    "servicesTitle": "Our Services",
+    "clinicIntro": "Xiacaotang TCM Clinic is located in Mississauga, serving the Greater Toronto Area. Dr. Yang Xia provides expert treatments for chronic conditions."
+  },
+  "footer": {
+    "addressTitle": "Address",
+    "address": "123 TCM Street, Mississauga, Ontario",
+    "quickLinksTitle": "Quick Links",
+    "quickLinkAbout": "About Us",
+    "quickLinkServices": "Our Services",
+    "phoneTitle": "Phone",
+    "phone": "+1 (123) 456-7890",
+    "email": "Email",
+    "copyright": "\u00a9 2026 Xiacaotang. All rights reserved."
+  }
+}

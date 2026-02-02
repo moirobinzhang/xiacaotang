@@ -101,6 +101,30 @@ export interface Clinic {
 
 
 
-    home: string;
+    welcomeMessage: {
+        en: string;
+        zh: string;
+    };
+    lang: {
+        en: string;
+        zh: string;
+    };
+
+    home: {
+        en: string;
+        zh: string;
+    };
+    about: {
+        en: string;
+        zh: string;
+    };
+    contact: {
+        en: string;
+        zh: string;
+    };
+    testimonials: {
+        en: string;
+        zh: string;
+    };
 }
 

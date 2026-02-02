@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ServicesSection from './components/ServicesSection';
-import DoctorsSection from './components/DoctorsSection';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import MainLayout from './layouts/MainLayout';
+import HomePage from './pages/Home';
+import AboutPage from './pages/About';
+import ServicesPage from './pages/Services';
+import ContactPage from './pages/Contact';
+import TestimonialsPage from './pages/Testimonials';
 import DoctorDetail from './pages/Doctor';
 import { getLanguage } from './i18n';
 
 
 const App: React.FC = () => {
 
-  const [language, setLanguage] = useState(getLanguage());
-
   useEffect(() => {
     // 监听语言变化
     const handleLanguageChange = () => {
-      setLanguage(getLanguage());
+      getLanguage();
     };
 
     window.addEventListener('languageChange', handleLanguageChange);
@@ -28,24 +26,20 @@ const App: React.FC = () => {
 
 
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <ServicesSection />
-              <DoctorsSection />
-              <Contact />
-              <Footer />
-            </>
-          }
-        />
-        <Route path="/doctor/:name" element={<DoctorDetail />} />
-      </Routes>
-    </Router>
+    <Suspense fallback="Loading...">
+      <Router>
+        <MainLayout>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/testimonials" element={<TestimonialsPage />} />
+            <Route path="/doctor/:name" element={<DoctorDetail />} />
+          </Routes>
+        </MainLayout>
+      </Router>
+    </Suspense>
   );
 };
 

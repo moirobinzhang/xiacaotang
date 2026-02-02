@@ -1,11 +1,34 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import translationEN from '../public/locales/en/translation.json';
+import translationZH from '../public/locales/zh/translation.json';
 
-import data from './assets/data.json';
-import { Clinic } from './types/Clinic';
-import { ClinicList } from './types/ClinicList';
+i18n
+  .use(initReactI18next) // Passes i18n down to react-i18next
+  .init({
+    resources: {
+      en: { translation: translationEN },
+      zh: { translation: translationZH },
+    },
+    lng: 'en', // Default language
+    fallbackLng: 'en',
+    load: 'languageOnly', // Ensures 'en-US' resolves to 'en'
+    interpolation: {
+      escapeValue: false, // React already escapes by default
+    },
+  });
+
+export default i18n;
+
 import { LanguageType } from './types/LanguageType'; // 导入 Language 类型
+import i18nEn from '../public/locales/en/translation.json';
+import i18nZh from '../public/locales/zh/translation.json';
 
-// 强制将导入的 data 转换为 MultiLanguageData 类型
-const typedData = data as ClinicList;
+interface TranslationData {
+  [key: string]: string | TranslationData;
+}
+
+const i18nData: Record<LanguageType, TranslationData> = { en: i18nEn, zh: i18nZh };
 
 let currentLanguage: LanguageType = (localStorage.getItem('language') as LanguageType) || 'en';
 
@@ -23,6 +46,20 @@ export const getLanguage = (): LanguageType => {
 };
 
 // 获取翻译内容
-export const t = <K extends keyof Clinic>(key: K): Clinic[K] => {
-  return typedData[currentLanguage][key];
+export const t = (key: string): string => {
+  const keys = key.split('.');
+  let value: TranslationData | string = i18nData[currentLanguage];
+  for (const k of keys) {
+    if (typeof value === 'object' && value !== null) {
+      value = value[k];
+    } else {
+      return key; // Return the key if translation is missing
+    }
+  }
+  return typeof value === 'string' ? value : key;
+};
+
+// 获取本地化值
+export const getLocalizedValue = (field: { en: string; zh: string }, language: LanguageType): string => {
+  return field[language] || field.en;
 };

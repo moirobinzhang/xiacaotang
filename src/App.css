@@ -1,19 +1,58 @@
+/* 1. 全局宣纸底色与背景纹理 */
+:root {
+  --parchment: #f7f3e8;
+  --ink-black: #2c2c2c;
+  --gold-accent: #c5a059;
+}
+
+body {
+  background-color: var(--parchment) !important;
+  background-image: url('https://www.transparenttextures.com/patterns/ashen-paper.png'); /* 纸张质感纹理 */
+  color: var(--ink-black);
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+/* 2. 移除 Header 绿色背景，改为透明墨色 */
+header, .MuiAppBar-root {
+  background-color: rgba(247, 243, 232, 0.9) !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+header .MuiTypography-root, 
+header .MuiButton-root, 
+header a {
+  color: var(--ink-black) !important;
+  font-weight: 600 !important;
+}
+
+/* 3. 服务卡片：纸上水墨感 */
+.MuiCard-root {
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: none !important;
+}
+
+.MuiCard-root:hover {
+  border-color: var(--gold-accent) !important;
+  background: rgba(197, 160, 89, 0.05) !important;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 0;
+  text-align: initial;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +61,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -34,7 +74,7 @@
 }
 
 .card {
-  padding: 2em;
+  padding: 1em;
 }
 
 .read-the-docs {

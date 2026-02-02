@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "services": "服务",
+    "contact": "联系我们",
+    "testimonials": "患者反馈"
+  },
+  "home": {
+    "servicesTitle": "服务项目",
+    "clinicIntro": "夏草堂中医针灸诊所位于密西沙加，辐射大多伦多地区。夏扬医生每每药到病除，屡起沉疴。"
+  },
+  "footer": {
+    "addressTitle": "诊所地址",
+    "address": "中医街123号, 密西沙加, 安大略省",
+    "quickLinksTitle": "快速链接",
+    "quickLinkAbout": "关于我们",
+    "quickLinkServices": "我们的服务",
+    "phoneTitle": "电话",
+    "phone": "+1 (123) 456-7890",
+    "email": "电子邮件",
+    "copyright": "© 2026 夏草堂。版权所有。"
+  }
+}

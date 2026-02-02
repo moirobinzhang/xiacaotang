@@ -1,0 +1,98 @@
+body {
+  background-color: #f7f3e8 !important; /* 宣纸暖色 */
+  background-image: url('https://www.transparenttextures.com/patterns/ashen-paper.png'); /* 纸张纹理 */
+  color: #2c2c2c;
+  margin: 0;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  /* 替换为你上传的太极图 URL */
+  background: url('/path-to-your-yin-yang.png') no-repeat center;
+  background-size: contain;
+  opacity: 0.05; /* 极其淡的水印效果 */
+  z-index: -1;
+  pointer-events: none;
+}
+
+header {
+  background-color: rgba(247, 243, 232, 0.8); /* Semi-transparent parchment */
+  color: #2c2c2c;
+}
+
+nav a {
+  color: #2c2c2c; /* Ink Black */
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+nav a.active {
+  border-bottom: 2px solid #c5a059; /* Old Gold brush stroke */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1.zh, h2.zh, h3.zh, h4.zh, h5.zh, h6.zh {
+  font-family: 'Ma Shan Zheng', cursive; /* Calligraphy-style font for Chinese */
+}
+
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle hand-drawn border */
+  border-radius: 2px;
+  box-shadow: none; /* Remove heavy shadows */
+}
+
+/* 2. 导航栏重构：透明化与水墨色文字 */
+.MuiAppBar-root {
+  background-color: rgba(247, 243, 232, 0.8) !important; /* 半透明宣纸色 */
+  box-shadow: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.MuiTypography-root, .MuiButton-root {
+  color: #2c2c2c !important; /* 墨黑色文字 */
+  font-family: 'Playfair Display', serif !important;
+}
+
+/* 导航激活状态：水墨下划线 */
+.active-nav-link {
+  border-bottom: 2px solid #c5a059; /* 古金色点缀 */
+}
+
+/* 3. 服务卡片：简约水墨风 */
+.MuiCard-root {
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease;
+}
+
+.MuiCard-root:hover {
+  border-color: #c5a059 !important;
+  background: rgba(197, 160, 89, 0.03) !important;
+}
+
+.MuiButton-contained {
+  background-color: #2c2c2c !important; /* 墨黑按钮 */
+  color: #f7f3e8 !important;
+}
+
+/* 4. 页脚：沉稳墨绿或深灰 */
+footer {
+  background-color: #1a2f23 !important; /* 保持墨绿作为底座，增加稳重感 */
+  color: #f7f3e8 !important; /* 宣纸色文字 */
+  padding: 40px 0;
+}
+
+footer a, footer p {
+  color: rgba(247, 243, 232, 0.8) !important;
+}

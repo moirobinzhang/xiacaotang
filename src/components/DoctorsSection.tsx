@@ -1,15 +1,17 @@
 import React from 'react';
 import { Box, Typography, Grid, Card, CardContent, CardMedia } from '@mui/material';
+import { getLocalizedValue } from '../utils/i18nHelper';
 import { t } from '../i18n';
 import { Doctor } from '../types/Doctor';
 
 const DoctorsSection: React.FC = () => {
   const doctors = t('doctors') as Doctor[];
+  const lang = t('lang');
 
   return (
     <Box sx={{ padding: '40px 0', width: '100%' }}>
       <Typography variant="h4" component="h2" align="center" gutterBottom>
-        {t('doctorsTitle')}
+        {getLocalizedValue(t('doctorsTitle'), lang)}
       </Typography>
       <Grid container spacing={4} justifyContent="center">
         {doctors.map((doctor, index) => (
@@ -19,14 +21,14 @@ const DoctorsSection: React.FC = () => {
                 component="img"
                 height="200"
                 image={doctor.image}
-                alt={doctor.name.en}
+                alt={getLocalizedValue(doctor.name, lang)}
               />
               <CardContent>
                 <Typography variant="h5" component="h3" gutterBottom>
-                  {doctor.name.en}
+                  {getLocalizedValue(doctor.name, lang)}
                 </Typography>
                 <Typography variant="subtitle1" component="p" gutterBottom>
-                  {doctor.title.en}
+                  {getLocalizedValue(doctor.title, lang)}
                 </Typography>
                 <Typography
                   variant="body1"
@@ -38,7 +40,7 @@ const DoctorsSection: React.FC = () => {
                     whiteSpace: 'nowrap',
                   }}
                 >
-                  {doctor.bio.en}
+                  {getLocalizedValue(doctor.bio, lang)}
                 </Typography>
               </CardContent>
             </Card>

@@ -31,31 +31,11 @@
         "alt": "Traditional Chinese Medicine",
         "servicename": "tcm",
         "description": "[NEED_MANUAL_INPUT]"
-      },
-      {
-        "url": "/images/hero-tcm.jpg",
-        "alt": "Herbology",
-        "servicename": "herbology",
-        "description": "Traditional Chinese medicine (TCM) originated in ancient China and has evolved over thousands of years. TCM practitioners use herbal medicines and various mind and body practices, such as acupuncture and tai chi, to treat or prevent health problems. In the United States and Canada, people use TCM primarily as a complementary health approach."
-      },
-      {
-        "url": "/images/hero_acupuncture.jpg",
-        "alt": "Acupuncture",
-        "servicename": "acupuncture",
-        "description": "Acupuncture is a holistic health technique that stems from Traditional Chinese Medicine practices in which trained practitioners stimulate specific points on the body by inserting thin needles into the skin."
-      },
-      {
-        "url": "/images/hero-store.jpg",
-        "alt": "Hearing Aid",
-        "servicename": "hearingaid",
-        "description": "A hearing aid or deaf aid is an electroacoustic device which is designed to amplify sound for the wearer, usually with the aim of making speech more intelligible, and to correct impaired hearing as measured by audiometer. In the United States, Hearing aids are considered medical devices and are regulated by the Food and Drug Administration (FDA). Ordinary small audio amplifiers or other plain sound reinforcing systems cannot be sold as “hearing aids”."
       }
     ],
     "description": "[NEED_MANUAL_INPUT]",
     "services": [
-      { "title": "Acupuncture", "description": "[NEED_MANUAL_INPUT]" },
-      { "title": "Massage", "description": "Traditional massage techniques to relax muscles and improve circulation." },
-      { "title": "Herbal Medicine", "description": "Custom herbal prescriptions based on your body condition." }
+      { "title": "Acupuncture", "description": "[NEED_MANUAL_INPUT]" }
     ],
     "doctors": [
       {
@@ -65,18 +45,8 @@
         "bio": "[NEED_MANUAL_INPUT]",
         "image": "[NEED_MANUAL_INPUT]",
         "fullBio": "[NEED_MANUAL_INPUT]"
-      },
-      {
-        "id": "doctor2",
-        "name": "Dr. Li",
-        "title": "Herbal Medicine Expert",
-        "bio": "Dr. Li specializes in herbal medicine and has helped thousands of patients improve their health.",
-        "image": "/images/doctor2.jpg",
-        "fullBio": "Dr. Li is an expert in herbal medicine and holistic health. She holds a Ph.D. in Traditional Chinese Medicine and has published numerous research papers on herbal remedies."
       }
-    ],
-    "contactTitle": "Contact Us",
-    "home": "Home"
+    ]
   },
   "zh": {
     "name": "夏草堂",
@@ -110,31 +80,11 @@
         "alt": "中医",
         "servicename": "[NEED_MANUAL_INPUT]",
         "description": "[NEED_MANUAL_INPUT]"
-      },
-      {
-        "url": "/images/hero-tcm.jpg",
-        "alt": "herbology",
-        "servicename": "中药",
-        "description": "Traditional Chinese medicine (TCM) originated in ancient China and has evolved over thousands of years. TCM practitioners use herbal medicines and various mind and body practices, such as acupuncture and tai chi, to treat or prevent health problems. In the United States and Canada, people use TCM primarily as a complementary health approach."
-      },
-      {
-        "url": "/images/hero_acupuncture.jpg",
-        "alt": "acupuncture",
-        "servicename": "针灸",
-        "description": "Acupuncture is a holistic health technique that stems from Traditional Chinese Medicine practices in which trained practitioners stimulate specific points on the body by inserting thin needles into the skin."
-      },
-      {
-        "url": "/images/hero-store.jpg",
-        "alt": "hearing aid",
-        "servicename": "助听器",
-        "description": "A hearing aid or deaf aid is an electroacoustic device which is designed to amplify sound for the wearer, usually with the aim of making speech more intelligible, and to correct impaired hearing as measured by audiometer. In the United States, Hearing aids are considered medical devices and are regulated by the Food and Drug Administration (FDA). Ordinary small audio amplifiers or other plain sound reinforcing systems cannot be sold as “hearing aids”。"
       }
     ],
     "description": "[NEED_MANUAL_INPUT]",
     "services": [
-      { "title": "针灸", "description": "[NEED_MANUAL_INPUT]" },
-      { "title": "推拿", "description": "传统推拿手法，放松肌肉，改善血液循环。" },
-      { "title": "中药", "description": "根据个人体质，配制中药方剂。" }
+      { "title": "针灸", "description": "[NEED_MANUAL_INPUT]" }
     ],
     "doctors": [
       {
@@ -144,17 +94,7 @@
         "bio": "[NEED_MANUAL_INPUT]",
         "image": "[NEED_MANUAL_INPUT]",
         "fullBio": "[NEED_MANUAL_INPUT]"
-      },
-      {
-        "id": "doctor2",
-        "name": "李医生",
-        "title": "中药专家",
-        "bio": "李医生专长于中药，已帮助数千名患者改善健康。",
-        "image": "/images/doctor2.jpg",
-        "fullBio": "李医生是中药和整体健康领域的专家。她拥有中医药学博士学位，并发表了多篇关于草药疗法的研究论文。"
       }
-    ],
-    "contactTitle": "联系我们",
-    "home": "首页"
+    ]
   }
 }

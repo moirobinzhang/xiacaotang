@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Typography, Button, Select, MenuItem, SelectChangeEvent } from '@mui/material';
 import { t, setLanguage, getLanguage } from '../i18n';
+import { getLocalizedValue } from '../utils/i18nHelper';
 import { LanguageType } from '../types/LanguageType';
 
 const Navbar: React.FC = () => {
@@ -9,23 +10,34 @@ const Navbar: React.FC = () => {
   const handleLanguageChange = (event: SelectChangeEvent<string>) => {
     const newLanguage = event.target.value as LanguageType;
     setLanguage(newLanguage);
-    setLanguageState(newLanguage); // 更新状态以触发重新渲染
+    setLanguageState(newLanguage);
   };
 
   useEffect(() => {
-    // 当 language 状态变化时，强制重新渲染
+    // Re-render on language change
   }, [language]);
 
   return (
     <AppBar position="static" sx={{ backgroundColor: '#A8C3A2' }}>
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: '#333' }}>
-          {t('name')}
+          {getLocalizedValue(t('name'), language)}
         </Typography>
-        <Button color="inherit" href="/" sx={{ color: '#333', whiteSpace: 'nowrap' }}> {/* 防止文本换行 */}
-          {t('home')}
+        <Button color="inherit" href="/" sx={{ color: '#333', whiteSpace: 'nowrap' }}>
+          {getLocalizedValue(t('home'), language)}
         </Button>
-
+        <Button color="inherit" href="/about" sx={{ color: '#333', whiteSpace: 'nowrap' }}>
+          {getLocalizedValue(t('about'), language)}
+        </Button>
+        <Button color="inherit" href="/services" sx={{ color: '#333', whiteSpace: 'nowrap' }}>
+          {getLocalizedValue(t('services'), language)}
+        </Button>
+        <Button color="inherit" href="/contact" sx={{ color: '#333', whiteSpace: 'nowrap' }}>
+          {getLocalizedValue(t('contact'), language)}
+        </Button>
+        <Button color="inherit" href="/testimonials" sx={{ color: '#333', whiteSpace: 'nowrap' }}>
+          {getLocalizedValue(t('testimonials'), language)}
+        </Button>
         <Select
           value={language}
           onChange={handleLanguageChange}

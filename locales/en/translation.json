@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "testimonials": "Patient Reviews"
+  },
+  "contact": {
+    "parking": "Parking",
+    "parkingDetail": "Free parking available in front of the clinic.",
+    "getDirections": "Get Directions on Google Maps"
+  },
+  "home": {
+    "servicesTitle": "Our Services",
+    "clinicIntro": "Xiacaotang TCM Clinic is located in Mississauga, serving the Greater Toronto Area. Dr. Yang Xia provides expert treatments for chronic conditions."
+  },
+  "footer": {
+    "addressTitle": "Address",
+    "address": "123 TCM Street, Mississauga, Ontario",
+    "quickLinksTitle": "Quick Links",
+    "quickLinkAbout": "About Us",
+    "quickLinkServices": "Our Services",
+    "phoneTitle": "Phone",
+    "phone": "+1 (123) 456-7890",
+    "email": "Email",
+    "hoursTitle": "Opening Hours",
+    "monday": "Mon",
+    "tuesday": "Tue",
+    "wednesday": "Wed",
+    "thursday": "Thu",
+    "friday": "Fri",
+    "saturday": "Sat",
+    "sunday": "Sun",
+    "copyright": "\u00a9 2026 Xiacaotang. All rights reserved."
+  },
+  "insurance": {
+    "title": "Insurance Accepted",
+    "desc": "We directly bill most Extended Health Plans (Corporate Insurance) and accept Auto Insurance (MVA)."
+  },
+  "about": {
+    "mission": "Our Mission: To restore balance and health through the wisdom of Traditional Chinese Medicine."
+  }
+}

@@ -1,12 +1,30 @@
 import React from 'react';
 import { Box, Typography, Grid, Link, useTheme, Divider } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import data from '../assets/data.json';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
   const theme = useTheme();
   const { clinic } = data;
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  if (!isHome) {
+    return (
+      <Box sx={{
+        backgroundColor: theme.palette.background.default,
+        color: theme.palette.text.primary,
+        padding: '16px 0',
+        borderTop: `1px solid ${theme.palette.secondary.main}`,
+      }}>
+        <Typography variant="body2" align="center" sx={{ color: 'rgba(44, 44, 44, 0.6)', fontFamily: 'Playfair Display, serif' }}>
+          {t('footer.copyright')}
+        </Typography>
+      </Box>
+    );
+  }
 
   return (
     <Box sx={{
@@ -16,6 +34,7 @@ const Footer: React.FC = () => {
       borderTop: `1px solid ${theme.palette.secondary.main}`, // Subtle Gold line
     }}>
       <Grid container spacing={4} justifyContent="center" sx={{ maxWidth: 'lg', margin: '0 auto', padding: '0 24px' }}>
+
         <Grid item xs={12} sm={4} sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
           <Typography variant="h6" gutterBottom sx={{
             fontFamily: 'Playfair Display, serif',
@@ -41,6 +60,7 @@ const Footer: React.FC = () => {
           </Typography>
         </Grid>
 
+
         <Grid item xs={12} sm={4} sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
           <Typography variant="h6" gutterBottom sx={{
             fontFamily: 'Playfair Display, serif',
@@ -64,6 +84,7 @@ const Footer: React.FC = () => {
             </Link>
           </Box>
         </Grid>
+
 
         <Grid item xs={12} sm={4} sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
           <Typography variant="h6" gutterBottom sx={{
@@ -98,6 +119,7 @@ const Footer: React.FC = () => {
             {t('footer.sunday') || 'Sun'}: {clinic.closedhours}
           </Typography>
         </Grid>
+
       </Grid>
 
       <Divider sx={{ margin: '32px auto', maxWidth: 'lg', opacity: 0.3, borderColor: theme.palette.primary.main }} />

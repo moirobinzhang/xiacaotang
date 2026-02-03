@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Button, Menu, MenuItem, Box, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText, Divider, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@mui/material/styles';
@@ -39,7 +40,7 @@ const Navbar: React.FC = () => {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton component="a" href={item === 'home' ? '/' : `/${item}`} sx={{ textAlign: 'center' }}>
+            <ListItemButton component={Link} to={item === 'home' ? '/' : `/${item}`} sx={{ textAlign: 'center' }}>
               <ListItemText
                 primary={t(`nav.${item}`)}
                 primaryTypographyProps={{
@@ -74,7 +75,8 @@ const Navbar: React.FC = () => {
           {navItems.map((page) => (
             <Button
               key={page}
-              href={page === 'home' ? '/' : `/${page}`}
+              component={Link}
+              to={page === 'home' ? '/' : `/${page}`}
               sx={{
                 fontSize: '1.05rem',
                 fontWeight: 500,

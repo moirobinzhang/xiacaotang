@@ -1,46 +1,240 @@
 {
   "services": [
     {
-      "title": { "en": "Acupuncture", "zh": "针灸治疗" },
-      "description": { "en": "Relieve pain and improve health.", "zh": "缓解疼痛，改善健康。" }
+      "id": "acupuncture",
+      "title": {
+        "en": "Acupuncture",
+        "zh": "针灸治疗"
+      },
+      "description": {
+        "en": "Stimulating specific points on the body by inserting thin needles to relieve pain and improve wellness.",
+        "zh": "通过刺入细针刺激身体特定穴位，以缓解疼痛并改善整体健康。"
+      },
+      "fullDescription": {
+        "en": "Acupuncture is a holistic health technique that stems from Traditional Chinese Medicine practices in which trained practitioners stimulate specific points on the body by inserting thin needles into the skin. Today acupuncture is one of the most popular practices of Traditional Chinese Medicine (TCM) in the West.",
+        "zh": "针灸是一种源于中医的整体健康技术，通过在皮肤上刺入细针来刺激身体特定穴位。如今，针灸是西方最流行的中医实践之一。"
+      },
+      "benefits": {
+        "en": [
+          "Pain Relief",
+          "Stress Reduction",
+          "Improved Wellness",
+          "Holistic Balance"
+        ],
+        "zh": [
+          "缓解疼痛",
+          "减轻压力",
+          "改善健康",
+          "整体平衡"
+        ]
+      },
+      "image": "/images/hero_acupuncture.jpg"
     },
     {
-      "title": { "en": "TCM Consultation", "zh": "中医诊疗" },
-      "description": { "en": "Holistic diagnosis and treatment.", "zh": "整体诊断与治疗。" }
+      "id": "herbology",
+      "title": {
+        "en": "TCM Herbal Medicine",
+        "zh": "中药治疗"
+      },
+      "description": {
+        "en": "A holistic, natural health care system stimulating the body's own healing mechanisms.",
+        "zh": "整体天然的健康护理体系，激发身体自愈机制。"
+      },
+      "fullDescription": {
+        "en": "Traditional Chinese Medicine is a type of holistic, natural health care system that dates back at least 2,000 years. TCM practitioners view the body as a complex network of interconnected parts, subject to the same laws that govern nature.",
+        "zh": "中医是一种至少有两千年历史的整体自然医疗体系。中医医师将身体视为一个由相互联系的部分组成的复杂网络，并受到自然法则的支配。"
+      },
+      "benefits": {
+        "en": [
+          "Natural Healing",
+          "Personalized Formulas",
+          "Chronic Disease Management"
+        ],
+        "zh": [
+          "自然疗法",
+          "个性化配方",
+          "慢性病管理"
+        ]
+      },
+      "image": "/images/hero-store.jpg"
     },
     {
-      "title": { "en": "Massage/Tui Na", "zh": "推拿按摩" },
-      "description": { "en": "Therapeutic massage for relaxation.", "zh": "放松身心的治疗按摩。" }
+      "id": "massage",
+      "title": {
+        "en": "Massage (Tui Na)",
+        "zh": "推拿按摩"
+      },
+      "description": {
+        "en": "Therapeutic manipulation of muscle and connective tissue for relaxation and healing.",
+        "zh": "通过推拿肌肉和结缔组织来放松身心和辅助治疗。"
+      },
+      "fullDescription": {
+        "en": "Massage is the manipulation of superficial and deeper layers of muscle and connective tissue using various techniques, to enhance function, aid in the healing process, decrease muscle reflex activity, and promote relaxation and well-being.",
+        "zh": "按摩是使用各种技术操纵浅层和深层肌肉及结缔组织，以增强功能，辅助愈合过程，减少肌肉反射活动，并促进放松和幸福感。"
+      },
+      "benefits": {
+        "en": [
+          "Muscle Relaxation",
+          "Improved Circulation",
+          "Stress Relief"
+        ],
+        "zh": [
+          "肌肉放松",
+          "促进血液循环",
+          "缓解压力"
+        ]
+      },
+      "image": "/images/service-placeholder.jpg"
     },
     {
-      "title": { "en": "Cupping Therapy", "zh": "拔罐疗法" },
-      "description": { "en": "Improve circulation and detoxify.", "zh": "改善循环，排毒养颜。" }
+      "id": "hearing-aid",
+      "title": {
+        "en": "Hearing Aid",
+        "zh": "助听器验配"
+      },
+      "description": {
+        "en": "Electroacoustic devices designed to amplify sound and correct impaired hearing.",
+        "zh": "放大声音并矫正听力受损的专业电声设备。"
+      },
+      "fullDescription": {
+        "en": "A hearing aid is an electroacoustic device which is designed to amplify sound for the wearer, usually with the aim of making speech more intelligible, and to correct impaired hearing as measured by audiometer.",
+        "zh": "助听器是一种旨在为佩戴者放大声音的电声设备，通常旨在使语音更易懂，并矫正听力计测量的听力受损。"
+      },
+      "benefits": {
+        "en": [
+          "Improved Hearing",
+          "Better Quality of Life"
+        ],
+        "zh": [
+          "提高听力",
+          "改善生活质量"
+        ]
+      },
+      "image": "/images/service-placeholder.jpg"
+    }
+  ],
+  "doctors": [
+    {
+      "name": {
+        "en": "Dr. Yang Xia",
+        "zh": "夏杨 医师"
+      },
+      "titles": {
+        "en": [
+          "TCM Practitioner",
+          "Master of Acupuncture",
+          "Registered R.TCMP & R.Ac in Ontario",
+          "Specialist in Sub-health Management",
+          "Member of BTCMPAAC & China Association of TCM"
+        ],
+        "zh": [
+          "中医师",
+          "针灸硕士",
+          "安省注册中医师及针灸师 (R.TCMP & R.Ac)",
+          "亚健康管理专家",
+          "全加中医药针灸协会及中国中医药协会会员"
+        ]
+      },
+      "bio": {
+        "en": "Born into a prestigious medical family, Dr. Xia has inherited and mastered the profound techniques of Traditional Chinese Medicine through decades of mentorship. She is widely respected for her expertise in 'Pulse Diagnosis' and her success in treating chronic, intractable diseases where conventional methods may have failed.",
+        "zh": "出身中医世家，师承名医，深得传统医学精髓。精通“三部九候”脉诊，擅长治疗各类各类疑难杂症及慢性病调理，尤以脉诊精准著称。"
+      },
+      "specialties": {
+        "en": [
+          "Cardiovascular Health",
+          "Gynecology & Menopause",
+          "Gastrointestinal Disorders",
+          "Respiratory Conditions (Asthma/Cough)",
+          "Pain Management (Neck/Shoulder/Back)",
+          "Insomnia & Depression",
+          "Sports & Auto Injuries",
+          "Complex Diseases"
+        ],
+        "zh": [
+          "心脑血管疾病",
+          "妇科及更年期综合症",
+          "脾胃病",
+          "呼吸系统疾病（哮喘/久咳）",
+          "痛症治疗（颈肩腰腿痛）",
+          "失眠与抑郁",
+          "运动及车祸损伤",
+          "各类疑难杂症"
+        ]
+      },
+      "image": "/images/dr-xia-yang.jpg"
     },
     {
-      "title": { "en": "TCM Prescription", "zh": "中药方剂" },
-      "description": { "en": "Customized herbal medicine formulas.", "zh": "定制的草药配方。" }
+      "name": {
+        "en": "Dr. Zhiquan Xia",
+        "zh": "夏志权 医师"
+      },
+      "titles": {
+        "en": [
+          "Master of Traditional Chinese Medicine",
+          "Registered R.TCMP & R.Ac in Ontario",
+          "Registered Audiologist in Ontario"
+        ],
+        "zh": [
+          "中医硕士",
+          "安省注册中医师及针灸师 (R.TCMP & R.Ac)",
+          "安省注册听力学家"
+        ]
+      },
+      "bio": {
+        "en": "Dr. Zhiquan Xia holds a Master's degree in TCM and combines extensive clinical experience with a deep understanding of integrative health. He is uniquely qualified as both a TCM Practitioner and an Audiologist.",
+        "zh": "中医硕士，拥有丰富的临床经验，致力于中西医结合的健康管理。同时拥有安省注册听力学家资格，医学背景深厚。"
+      },
+      "specialties": {
+        "en": [],
+        "zh": []
+      },
+      "image": "/images/dr-xia-zhiquan.jpg"
     }
   ],
   "carouselImages": [
     {
       "url": "/images/hero-frontdoor.jpg",
-      "alt": { "en": "Front door of Xiacaotang TCM Clinic", "zh": "夏草堂中医针灸诊所正门" },
-      "description": { "en": "Welcome to Xiacaotang TCM Clinic.", "zh": "欢迎光临夏草堂中医针灸诊所。" }
+      "alt": {
+        "en": "Front door of Xiacaotang TCM Clinic",
+        "zh": "夏草堂中医针灸诊所正门"
+      },
+      "description": {
+        "en": "Welcome to Xiacaotang TCM Clinic.",
+        "zh": "欢迎光临夏草堂中医针灸诊所。"
+      }
     },
     {
       "url": "/images/hero_acupuncture.jpg",
-      "alt": { "en": "Acupuncture treatment", "zh": "针灸治疗" },
-      "description": { "en": "Experience the healing power of acupuncture.", "zh": "针灸调理，润泽康宁。" }
+      "alt": {
+        "en": "Acupuncture treatment",
+        "zh": "针灸治疗"
+      },
+      "description": {
+        "en": "Experience the healing power of acupuncture.",
+        "zh": "针灸调理，润泽康宁。"
+      }
     },
     {
       "url": "/images/hero-store.jpg",
-      "alt": { "en": "Herbal medicine store", "zh": "草药商店" },
-      "description": { "en": "Explore our herbal medicine collection.", "zh": "神农遗风，草木本心。" }
+      "alt": {
+        "en": "Herbal medicine store",
+        "zh": "草药商店"
+      },
+      "description": {
+        "en": "Explore our herbal medicine collection.",
+        "zh": "神农遗风，草木本心。"
+      }
     },
     {
       "url": "/images/hero-tcm.jpg",
-      "alt": { "en": "Traditional Chinese Medicine tools", "zh": "中医工具" },
-      "description": { "en": "Discover the art of Traditional Chinese Medicine.", "zh": "传承中医艺术，守护生命健康。" }
+      "alt": {
+        "en": "Traditional Chinese Medicine tools",
+        "zh": "中医工具"
+      },
+      "description": {
+        "en": "Discover the art of Traditional Chinese Medicine.",
+        "zh": "传承中医艺术，守护生命健康。"
+      }
     }
   ],
   "clinic": {

@@ -19,6 +19,14 @@
     "phoneTitle": "电话",
     "phone": "+1 (123) 456-7890",
     "email": "电子邮件",
+    "hoursTitle": "诊所营业时间",
+    "monday": "周一",
+    "tuesday": "周二",
+    "wednesday": "周三",
+    "thursday": "周四",
+    "friday": "周五",
+    "saturday": "周六",
+    "sunday": "周日",
     "copyright": "© 2026 夏草堂。版权所有。"
   }
 }

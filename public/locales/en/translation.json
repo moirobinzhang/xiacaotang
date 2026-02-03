@@ -19,6 +19,14 @@
     "phoneTitle": "Phone",
     "phone": "+1 (123) 456-7890",
     "email": "Email",
+    "hoursTitle": "Opening Hours",
+    "monday": "Mon",
+    "tuesday": "Tue",
+    "wednesday": "Wed",
+    "thursday": "Thu",
+    "friday": "Fri",
+    "saturday": "Sat",
+    "sunday": "Sun",
     "copyright": "\u00a9 2026 Xiacaotang. All rights reserved."
   }
 }

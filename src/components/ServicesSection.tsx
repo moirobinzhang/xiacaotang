@@ -51,10 +51,19 @@ const ServicesSection: React.FC = () => {
               </CardContent>
               <Box sx={{ padding: '16px' }}>
                 <Button
-                  variant="contained"
+                  variant="outlined"
                   component={Link}
                   to={`/services#${index}`}
-                  sx={{ backgroundColor: '#1a2f23', color: '#fdfaf5' }}
+                  sx={{
+                    borderColor: '#1a2f23',
+                    color: '#1a2f23',
+                    borderWidth: '1px',
+                    '&:hover': {
+                      backgroundColor: 'rgba(26, 47, 35, 0.05)',
+                      borderWidth: '1px',
+                      borderBottomWidth: '3px' // Brush stroke feel
+                    }
+                  }}
                 >
                   {getLocalizedValue({ en: 'Learn More', zh: '了解更多' }, currentLang)}
                 </Button>

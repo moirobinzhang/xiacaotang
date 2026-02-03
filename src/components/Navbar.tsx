@@ -64,11 +64,19 @@ const Navbar: React.FC = () => {
   return (
     <AppBar position="static" color="transparent">
       <Toolbar sx={{ display: 'flex', alignItems: 'center', padding: '16px 24px', justifyContent: 'space-between' }}>
-        <img
-          src="/images/logo.png"
-          alt="Logo"
-          style={{ height: '60px', width: 'auto', opacity: 0.9 }}
-        />
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            <Box 
+                component="img"
+                src="/images/logo-enso.png"
+                alt="Xia's Traditional Chinese Medicine Clinic 夏草堂"
+                sx={{ 
+                    height: '50px', 
+                    width: 'auto', 
+                    mixBlendMode: 'multiply', // Makes white background transparent on parchment
+                    filter: 'contrast(1.2)' // Enhances the ink look
+                }}
+            />
+        </Box>
 
         {/* Desktop Nav */}
         <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: '32px', alignItems: 'center' }}>

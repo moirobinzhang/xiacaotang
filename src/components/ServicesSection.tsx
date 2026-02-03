@@ -53,7 +53,7 @@ const ServicesSection: React.FC = () => {
                 <Button
                   variant="outlined"
                   component={Link}
-                  to={`/services#${index}`}
+                  to={`/services/${(service as any).id}`}
                   sx={{
                     borderColor: '#1a2f23',
                     color: '#1a2f23',

@@ -73,15 +73,17 @@ const ServiceDetail: React.FC = () => {
 
             {/* Hero Image */}
             {service.image && (
-                <Box component="img" src={service.image} alt={isZh ? service.title.zh : service.title.en} sx={{
-                    width: '100%',
-                    height: 'auto',
-                    maxHeight: '400px',
-                    objectFit: 'cover',
-                    borderRadius: '4px', // Slight rounding
-                    marginBottom: 4,
-                    boxShadow: '0 4px 20px rgba(0,0,0,0.05)'
-                }} />
+                <Box component="img"
+                    src={`${import.meta.env.BASE_URL}${service.image.startsWith('/') ? service.image.substring(1) : service.image}`}
+                    alt={isZh ? service.title.zh : service.title.en} sx={{
+                        width: '100%',
+                        height: 'auto',
+                        maxHeight: '400px',
+                        objectFit: 'cover',
+                        borderRadius: '4px', // Slight rounding
+                        marginBottom: 4,
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.05)'
+                    }} />
             )}
 
             {/* Full Description */}

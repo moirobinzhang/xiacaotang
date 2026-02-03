@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Box, Avatar, Grid, Button } from '@mui/material';
+import { Typography, Box, Avatar } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import GoldenRatioLayout from '../components/GoldenRatioLayout';
@@ -14,7 +14,7 @@ const AboutUs: React.FC = () => {
 
   // Manual mapping of avatars to doctors for Zen aesthetic
   const getAvatar = (index: number) => {
-    return index === 0 ? '/images/zen-crane.png' : '/images/zen-deer.png';
+    return index === 0 ? `${import.meta.env.BASE_URL}images/zen-crane.png` : `${import.meta.env.BASE_URL}images/zen-deer.png`;
   };
 
   const toSlug = (name: string) => {
@@ -73,7 +73,7 @@ const AboutUs: React.FC = () => {
                 {getLocalizedValue(doctor.name, currentLang)}
               </Typography>
               <Typography variant="body2" sx={{ color: '#5d5d5d', marginTop: '8px', marginBottom: '16px' }}>
-                {getLocalizedValue(doctor.titles, currentLang)[0]}
+                {(getLocalizedValue(doctor.titles, currentLang) as string[])[0]}
               </Typography>
               <Typography variant="body1" sx={{
                 display: '-webkit-box',

@@ -65,17 +65,17 @@ const Navbar: React.FC = () => {
     <AppBar position="static" color="transparent">
       <Toolbar sx={{ display: 'flex', alignItems: 'center', padding: '16px 24px', justifyContent: 'space-between' }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <Box 
-                component="img"
-                src="/images/logo-enso.png"
-                alt="Xia's Traditional Chinese Medicine Clinic 夏草堂"
-                sx={{ 
-                    height: '50px', 
-                    width: 'auto', 
-                    mixBlendMode: 'multiply', // Makes white background transparent on parchment
-                    filter: 'contrast(1.2)' // Enhances the ink look
-                }}
-            />
+          <Box
+            component="img"
+            src={`${import.meta.env.BASE_URL}images/logo-enso.png`}
+            alt="Xia's Traditional Chinese Medicine Clinic 夏草堂"
+            sx={{
+              height: '50px',
+              width: 'auto',
+              mixBlendMode: 'multiply', // Makes white background transparent on parchment
+              filter: 'contrast(1.2)' // Enhances the ink look
+            }}
+          />
         </Box>
 
         {/* Desktop Nav */}

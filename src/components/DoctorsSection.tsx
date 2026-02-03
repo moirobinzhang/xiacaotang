@@ -1,12 +1,15 @@
 import React from 'react';
 import { Box, Typography, Grid, Card, CardContent, CardMedia } from '@mui/material';
-import { t } from '../i18n';
+import { t, getLocalizedValue } from '../i18n';
+import { useTranslation } from 'react-i18next';
 import { Doctor } from '../types/Doctor';
+import data from '../assets/data.json';
 
 const DoctorsSection: React.FC = () => {
-  const doctors = (t('doctors') || []) as Doctor[];
+  const { i18n } = useTranslation();
+  const doctorsData = data.doctors as unknown as Doctor[];
 
-  if (!Array.isArray(doctors) || doctors.length === 0) {
+  if (!Array.isArray(doctorsData) || doctorsData.length === 0) {
     return null;
   }
 
@@ -16,21 +19,21 @@ const DoctorsSection: React.FC = () => {
         {t('doctorsTitle')}
       </Typography>
       <Grid container spacing={4} justifyContent="center">
-        {doctors.map((doctor, index) => (
+        {doctorsData.map((doctor, index) => (
           <Grid item key={index} xs={12} sm={6} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
             <Card sx={{ width: '300px', minWidth: '300px' }}>
               <CardMedia
                 component="img"
                 height="200"
-                image={doctor.image}
-                alt={doctor.name}
+                image={`${import.meta.env.BASE_URL}${doctor.image.startsWith('/') ? doctor.image.substring(1) : doctor.image}`}
+                alt={getLocalizedValue(doctor.name, i18n.language)}
               />
               <CardContent>
                 <Typography variant="h5" component="h3" gutterBottom>
-                  {doctor.name}
+                  {getLocalizedValue(doctor.name, i18n.language)}
                 </Typography>
                 <Typography variant="subtitle1" component="p" gutterBottom>
-                  {doctor.title}
+                  {(getLocalizedValue(doctor.titles, i18n.language) as string[])[0]}
                 </Typography>
                 <Typography
                   variant="body1"
@@ -42,7 +45,7 @@ const DoctorsSection: React.FC = () => {
                     whiteSpace: 'nowrap',
                   }}
                 >
-                  {doctor.bio}
+                  {getLocalizedValue(doctor.bio, i18n.language)}
                 </Typography>
               </CardContent>
             </Card>

@@ -20,17 +20,21 @@ interface DataStructure {
 
 const data: DataStructure = {
   en: {
-    carouselImages: rawData.carouselImages.map((image) => ({
+    carouselImages: rawData.carouselImages.map((image, index) => ({
       ...image,
+      url: `${import.meta.env.BASE_URL}${image.url.startsWith('/') ? image.url.substring(1) : image.url}`,
       description: image.description,
       alt: image.alt,
+      servicename: rawData.services[index % rawData.services.length]?.id || 'acupuncture'
     })),
   },
   zh: {
-    carouselImages: rawData.carouselImages.map((image) => ({
+    carouselImages: rawData.carouselImages.map((image, index) => ({
       ...image,
+      url: `${import.meta.env.BASE_URL}${image.url.startsWith('/') ? image.url.substring(1) : image.url}`,
       description: image.description,
       alt: image.alt,
+      servicename: rawData.services[index % rawData.services.length]?.id || 'acupuncture'
     })),
   },
 };

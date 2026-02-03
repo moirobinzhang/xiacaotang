@@ -60,6 +60,9 @@ export const t = (key: string): string => {
 };
 
 // 获取本地化值
-export const getLocalizedValue = (field: { en: string; zh: string }, language: LanguageType): string => {
-  return field[language] || field.en;
+// 获取本地化值
+export const getLocalizedValue = <T>(field: { en: T; zh: T } | undefined, language: string): T => {
+  if (!field) return '' as unknown as T;
+  const langKey = (language === 'zh' ? 'zh' : 'en') as keyof typeof field;
+  return field[langKey] || field['en'];
 };

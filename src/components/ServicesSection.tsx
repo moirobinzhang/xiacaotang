@@ -36,7 +36,7 @@ const ServicesSection: React.FC = () => {
       <Grid container spacing={4} justifyContent="center">
         {services.map((service: Service, index: number) => (
           <Grid item key={index} xs={12} sm={6} md={3}>
-            <Card sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+            <Card sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', minHeight: '280px' }}>
               <CardContent>
                 <Typography
                   variant="h5"

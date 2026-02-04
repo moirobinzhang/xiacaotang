@@ -8,6 +8,7 @@ import rawData from '../assets/data.json';
 
 interface CarouselImage {
   url: string;
+  mobileUrl: string;
   alt: { en: string; zh: string };
   description: { en: string; zh: string };
   servicename?: string;
@@ -23,6 +24,7 @@ const data: DataStructure = {
     carouselImages: rawData.carouselImages.map((image, index) => ({
       ...image,
       url: `${import.meta.env.BASE_URL}${image.url.startsWith('/') ? image.url.substring(1) : image.url}`,
+      mobileUrl: `${import.meta.env.BASE_URL}${image.url.startsWith('/') ? image.url.substring(1).replace(/(\.[\w\d_-]+)$/i, '-mobile$1') : image.url.replace(/(\.[\w\d_-]+)$/i, '-mobile$1')}`,
       description: image.description,
       alt: image.alt,
       servicename: rawData.services[index % rawData.services.length]?.id || 'acupuncture'
@@ -32,6 +34,7 @@ const data: DataStructure = {
     carouselImages: rawData.carouselImages.map((image, index) => ({
       ...image,
       url: `${import.meta.env.BASE_URL}${image.url.startsWith('/') ? image.url.substring(1) : image.url}`,
+      mobileUrl: `${import.meta.env.BASE_URL}${image.url.startsWith('/') ? image.url.substring(1).replace(/(\.[\w\d_-]+)$/i, '-mobile$1') : image.url.replace(/(\.[\w\d_-]+)$/i, '-mobile$1')}`,
       description: image.description,
       alt: image.alt,
       servicename: rawData.services[index % rawData.services.length]?.id || 'acupuncture'
@@ -43,7 +46,7 @@ const Hero: React.FC = () => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language.substring(0, 2) as keyof DataStructure;
   const carouselImages = data[currentLang]?.carouselImages || [
-    { url: '', alt: { en: '', zh: '' }, description: { en: '', zh: '' } },
+    { url: '', mobileUrl: '', alt: { en: '', zh: '' }, description: { en: '', zh: '' } },
   ];
 
   // Preload images for smoothness
@@ -51,6 +54,11 @@ const Hero: React.FC = () => {
     carouselImages.forEach((image) => {
       const img = new Image();
       img.src = image.url;
+      // Preload mobile image if on mobile
+      if (window.innerWidth < 768) {
+        const mobileImg = new Image();
+        mobileImg.src = image.mobileUrl;
+      }
     });
   }, [carouselImages]);
 
@@ -82,6 +90,8 @@ const Hero: React.FC = () => {
             zIndex: 20,
           }
         }}
+        stopAutoPlayOnHover={false}
+        swipe={window.innerWidth < 768} // Enable swipe only on mobile if desired, or keep default
       >
         {carouselImages.map((item, index) => (
           <Box
@@ -97,18 +107,25 @@ const Hero: React.FC = () => {
               overflow: 'hidden'
             }}
           >
-            <img
-              src={item.url}
-              alt={item.alt[currentLang]}
-              loading="eager"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                objectPosition: 'center',
-                display: 'block'
-              }}
-            />
+            <picture style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <source media="(max-width: 767px)" srcSet={item.mobileUrl} />
+              <img
+                src={item.url}
+                alt={item.alt[currentLang]}
+                loading={index === 0 ? "eager" : "lazy"}
+                // @ts-ignore
+                fetchpriority={index === 0 ? "high" : "auto"}
+                width="1920"
+                height="1080"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                  display: 'block'
+                }}
+              />
+            </picture>
           </Box>
         ))}
       </Carousel>

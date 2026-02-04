@@ -1,4 +1,5 @@
 {
+  "brandName": "Xia's Herbal & Acupuncture Health Centre",
   "nav": {
     "home": "Home",
     "about": "About",
@@ -13,7 +14,7 @@
   },
   "home": {
     "servicesTitle": "Our Services",
-    "clinicIntro": "Xiacaotang TCM Clinic is located in Mississauga, serving the Greater Toronto Area. Dr. Yang Xia provides expert treatments for chronic conditions."
+    "clinicIntro": "Xia's Herbal & Acupuncture Health Centre is located in Mississauga, serving the Greater Toronto Area. Dr. Yang Xia provides expert treatments for chronic conditions."
   },
   "footer": {
     "addressTitle": "Address",
@@ -25,6 +26,13 @@
     "phone": "+1 (123) 456-7890",
     "email": "Email",
     "hoursTitle": "Opening Hours",
+    "hours": {
+      "title": "Opening Hours",
+      "monFri": "Mon-Fri: 11 AM - 7 PM",
+      "sat": "Saturday: 10 AM - 5 PM",
+      "sun": "Sunday: Closed",
+      "appointment": "We take appointments"
+    },
     "monday": "Mon",
     "tuesday": "Tue",
     "wednesday": "Wed",

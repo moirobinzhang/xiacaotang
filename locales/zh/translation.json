@@ -1,4 +1,5 @@
 {
+  "brandName": "夏草堂",
   "nav": {
     "home": "首页",
     "about": "关于",
@@ -25,6 +26,13 @@
     "phone": "+1 (123) 456-7890",
     "email": "电子邮件",
     "hoursTitle": "诊所营业时间",
+    "hours": {
+      "title": "营业时间",
+      "monFri": "周一至周五：11 AM - 7 PM",
+      "sat": "周六：10 AM - 5 PM",
+      "sun": "周日：休息",
+      "appointment": "欢迎预约"
+    },
     "monday": "周一",
     "tuesday": "周二",
     "wednesday": "周三",

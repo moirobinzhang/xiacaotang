@@ -67,11 +67,13 @@ const Navbar: React.FC = () => {
         <Box component={Link} to="/" sx={{ display: 'flex', alignItems: 'center', gap: 2, textDecoration: 'none' }}>
           <Box
             component="img"
-            src={`${import.meta.env.BASE_URL}images/logo-enso.png`}
+            src={`${import.meta.env.BASE_URL}images/logo-enso-optimized.png`}
             alt="Xia's Herbal & Acupuncture Health Centre 夏草堂"
+            width="50"
+            height="50"
             sx={{
               height: '50px',
-              width: 'auto',
+              width: '50px',
               mixBlendMode: 'multiply', // Makes white background transparent on parchment
               filter: 'contrast(1.2)' // Enhances the ink look
             }}

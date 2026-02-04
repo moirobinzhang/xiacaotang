@@ -1,17 +1,16 @@
 import React, { Suspense, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
-import HomePage from './pages/Home';
-import AboutPage from './pages/About';
-import ServicesPage from './pages/Services';
-import ServiceDetail from './pages/ServiceDetail';
-import ContactPage from './pages/Contact';
-import TestimonialsPage from './pages/Testimonials';
-import DoctorDetail from './pages/Doctor';
 import { getLanguage } from './i18n';
-
-
 import CanonicalLink from './components/CanonicalLink';
+
+const HomePage = React.lazy(() => import('./pages/Home'));
+const AboutPage = React.lazy(() => import('./pages/About'));
+const ServicesPage = React.lazy(() => import('./pages/Services'));
+const ServiceDetail = React.lazy(() => import('./pages/ServiceDetail'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const TestimonialsPage = React.lazy(() => import('./pages/Testimonials'));
+const DoctorDetail = React.lazy(() => import('./pages/Doctor'));
 
 const App: React.FC = () => {
 

@@ -56,7 +56,7 @@
           "慢性病管理"
         ]
       },
-      "image": "/images/hero-store.jpg"
+      "image": "/images/hero-store-v2.webp"
     },
     {
       "id": "massage",
@@ -215,7 +215,7 @@
       }
     },
     {
-      "url": "/images/hero-store.jpg",
+      "url": "/images/hero-store-v2.webp",
       "alt": {
         "en": "Herbal medicine store",
         "zh": "草药商店"

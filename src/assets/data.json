@@ -84,7 +84,7 @@
           "缓解压力"
         ]
       },
-      "image": "/images/service-placeholder.jpg"
+      "image": "/images/tuina-placeholder.png"
     },
     {
       "id": "hearing-aid",
@@ -110,7 +110,7 @@
           "改善生活质量"
         ]
       },
-      "image": "/images/service-placeholder.jpg"
+      "image": "/images/hearing-aid-placeholder.png"
     }
   ],
   "doctors": [
@@ -238,7 +238,7 @@
     }
   ],
   "clinic": {
-    "name": "Xia’s Traditional Chinese Medicine",
+    "name": "Xia's Herbal & Acupuncture Health Centre",
     "address": "1675 The Chase #24b, Mississauga, ON L5M 5Y7",
     "street": "1675 The Chase #24b",
     "city": "Mississauga",

@@ -1,4 +1,6 @@
 import { Box, Typography } from '@mui/material';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PhoneIcon from '@mui/icons-material/Phone';
 import { useTranslation } from 'react-i18next';
 import data from '../assets/data.json';
 
@@ -58,8 +60,38 @@ const Sidebar: React.FC = () => {
                 }}>
                     {t('footer.addressTitle') || 'Contact'}
                 </Typography>
-                <Typography variant="body2" paragraph>{clinic.address}</Typography>
-                <Typography variant="body2" paragraph>{t('footer.phone')}: {clinic.phone}</Typography>
+
+                <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5, marginBottom: 2 }}>
+                    <LocationOnIcon fontSize="small" sx={{ color: '#1a2f23', mt: 0.3 }} />
+                    <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
+                        <a
+                            href="https://maps.google.com/?q=1675%20The%20Chase%20%2324b,%20Mississauga,%20ON%20L5M%205Y7"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ color: 'inherit', textDecoration: 'none' }}
+                        >
+                            {clinic.address}
+                        </a>
+                    </Typography>
+                </Box>
+
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, marginBottom: 1 }}>
+                    <PhoneIcon fontSize="small" sx={{ color: '#1a2f23' }} />
+                    <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
+                        <a href={`tel:${clinic.mobile.replace(/-/g, '')}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                            {clinic.mobile}
+                        </a>
+                    </Typography>
+                </Box>
+
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+                    <PhoneIcon fontSize="small" sx={{ color: '#1a2f23' }} />
+                    <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
+                        <a href={`tel:${clinic.phone.replace(/-/g, '')}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                            {clinic.phone}
+                        </a>
+                    </Typography>
+                </Box>
             </Box>
         </Box>
     );

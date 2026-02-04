@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Typography, Button, Container } from '@mui/material';
+import React, { useEffect } from 'react';
+import { Box, Typography, Button } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -40,98 +40,188 @@ const data: DataStructure = {
 };
 
 const Hero: React.FC = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const currentLang = i18n.language.substring(0, 2) as keyof DataStructure;
   const carouselImages = data[currentLang]?.carouselImages || [
     { url: '', alt: { en: '', zh: '' }, description: { en: '', zh: '' } },
   ];
+
+  // Preload images for smoothness
+  useEffect(() => {
+    carouselImages.forEach((image) => {
+      const img = new Image();
+      img.src = image.url;
+    });
+  }, [carouselImages]);
 
   if (!Array.isArray(carouselImages) || carouselImages.length === 0) {
     return null;
   }
 
   return (
-    <Box sx={{ position: 'relative', height: '400px', overflow: 'hidden', width: '100%' }}>
+    <Box sx={{ position: 'relative', height: { xs: '45vh', md: '55vh' }, minHeight: { xs: '350px', md: '400px' }, overflow: 'hidden', width: '100%' }}>
       <Carousel
         animation="fade"
-        interval={5000}
+        duration={800}
+        interval={6000}
         navButtonsAlwaysVisible
         indicatorIconButtonProps={{
           style: {
-            color: '#A8C3A2', // 竹子淡绿色
+            color: '#A8C3A2',
+            zIndex: 20,
           },
         }}
         activeIndicatorIconButtonProps={{
           style: {
-            color: '#4CAF50', // 强调绿色
+            color: '#4CAF50',
+            zIndex: 20,
           },
+        }}
+        navButtonsWrapperProps={{
+          style: {
+            zIndex: 20,
+          }
         }}
       >
         {carouselImages.map((item, index) => (
           <Box
             key={index}
             sx={{
-              backgroundImage: `url(${item.url})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              height: '400px',
+              height: { xs: '45vh', md: '55vh' },
+              minHeight: { xs: '350px', md: '400px' },
+              width: '100%',
               position: 'relative',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              overflow: 'hidden'
             }}
           >
-            {/* 文字背景遮罩 */}
-            <Box
-              sx={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
+            <img
+              src={item.url}
+              alt={item.alt[currentLang]}
+              loading="eager"
+              style={{
                 width: '100%',
                 height: '100%',
-                backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+                objectFit: 'cover',
+                objectPosition: 'center',
+                display: 'block'
               }}
-            >
-              <Typography
-                variant="h3"
-                align="center"
-                sx={{ color: '#fdfaf5', fontFamily: 'Playfair Display, serif', padding: '0 20px' }}
-              >
-                {getLocalizedValue(
-                  {
-                    en: 'Xiacaotang TCM Clinic — Exquisite Skill for Your Well-being.',
-                    zh: '夏草堂中医针灸诊所——医术精湛，润泽康宁',
-                  },
-                  currentLang
-                )}
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                backgroundColor: 'rgba(0, 0, 0, 0.1)', // 半透明黑色遮罩
-                padding: '20px',
-                borderRadius: '8px',
-              }}
-            >
-              <Container>
-                <Typography variant="h5" component="p" gutterBottom sx={{ color: '#FFF' }}>
-                  {getLocalizedValue(item.description, currentLang)?.slice(0, 60) + "..."}
-                </Typography>
-                <Button
-                  style={{ textTransform: 'none' }}
-                  variant="contained"
-                  size="large"
-                  sx={{ backgroundColor: '#4CAF50', color: '#FFF' }}
-                >
-                  <Link to={"/services/" + item.servicename} style={{ textDecoration: 'none', color: '#FFF' }}>
-                    {item.alt[currentLang]}
-                  </Link>
-                </Button>
-              </Container>
-            </Box>
+            />
           </Box>
         ))}
       </Carousel>
+
+      {/* Hero Content Overlay - Decoupled with high Z-Index */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0, 0, 0, 0.4)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          pointerEvents: 'none',
+          zIndex: 10,
+        }}
+      >
+        <Box sx={{ textAlign: 'center', pointerEvents: 'auto', padding: { xs: '0 40px', md: '0 20px' }, maxWidth: '900px' }}>
+
+          {/* Main Title (Brand Name) */}
+          <Typography
+            variant="h3"
+            component="h1"
+            gutterBottom
+            sx={{
+              color: '#fdfaf5',
+              fontFamily: '"Playfair Display", serif',
+              fontWeight: 700,
+              textShadow: '2px 2px 4px rgba(0,0,0,0.6)',
+              marginBottom: '16px',
+              display: { xs: 'none', md: 'block' }
+            }}
+          >
+            {t('brandName')}
+          </Typography>
+
+          {/* Mobile Title */}
+          <Typography
+            variant="h4"
+            component="h1"
+            gutterBottom
+            sx={{
+              color: '#fdfaf5',
+              fontFamily: '"Playfair Display", serif',
+              fontWeight: 700,
+              textShadow: '2px 2px 4px rgba(0,0,0,0.6)',
+              marginBottom: '10px',
+              display: { xs: 'block', md: 'none' },
+              fontSize: '1.5rem'
+            }}
+          >
+            {t('brandName')}
+          </Typography>
+
+          {/* Subtitle */}
+          <Typography
+            variant="h5"
+            component="h2"
+            gutterBottom
+            sx={{
+              color: '#fdfaf5',
+              fontFamily: '"Noto Sans SC", "Microsoft YaHei", sans-serif',
+              fontWeight: 400,
+              letterSpacing: '0.05em',
+              textShadow: '1px 1px 3px rgba(0,0,0,0.6)',
+              marginBottom: { xs: '20px', md: '32px' },
+              lineHeight: 1.4,
+              fontSize: { xs: '0.95rem', md: '1.5rem' }
+            }}
+          >
+            {getLocalizedValue(
+              {
+                en: "Exquisite Skill for Your Well-being",
+                zh: '医术精湛，润泽康宁',
+              },
+              currentLang
+            )}
+          </Typography>
+
+          {/* Button */}
+          <Button
+            component={Link}
+            to="/services"
+            variant="contained"
+            size="large"
+            sx={{
+              backgroundColor: '#4CAF50',
+              color: '#FFF',
+              textTransform: 'none',
+              fontSize: { xs: '0.9rem', md: '1.1rem' },
+              padding: { xs: '8px 24px', md: '10px 32px' },
+              borderRadius: '4px',
+              boxShadow: '0 4px 6px rgba(0,0,0,0.2)',
+              '&:hover': {
+                backgroundColor: '#388E3C',
+              },
+              fontFamily: '"Noto Sans SC", "Microsoft YaHei", sans-serif',
+            }}
+          >
+            {getLocalizedValue(
+              {
+                en: "Learn More",
+                zh: '了解更多',
+              },
+              currentLang
+            )}
+          </Button>
+        </Box>
+      </Box>
     </Box>
   );
 };

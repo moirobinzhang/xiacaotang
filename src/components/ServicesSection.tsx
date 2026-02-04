@@ -23,7 +23,7 @@ const ServicesSection: React.FC = () => {
   const currentLang = i18n.language.substring(0, 2);
 
   return (
-    <Box sx={{ padding: '40px 0' }}>
+    <Box className="services-section" sx={{ padding: '40px 0 0px !important', marginBottom: '0px !important' }}>
       <Typography
         variant="h4"
         component="h2"
@@ -35,7 +35,7 @@ const ServicesSection: React.FC = () => {
       </Typography>
       <Grid container spacing={4} justifyContent="center">
         {services.map((service: Service, index: number) => (
-          <Grid item key={index} xs={12} sm={6} md={4}>
+          <Grid item key={index} xs={12} sm={6} md={3}>
             <Card sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
               <CardContent>
                 <Typography

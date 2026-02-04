@@ -64,11 +64,11 @@ const Navbar: React.FC = () => {
   return (
     <AppBar position="static" color="transparent">
       <Toolbar sx={{ display: 'flex', alignItems: 'center', padding: '16px 24px', justifyContent: 'space-between' }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+        <Box component={Link} to="/" sx={{ display: 'flex', alignItems: 'center', gap: 2, textDecoration: 'none' }}>
           <Box
             component="img"
             src={`${import.meta.env.BASE_URL}images/logo-enso.png`}
-            alt="Xia's Traditional Chinese Medicine Clinic 夏草堂"
+            alt="Xia's Herbal & Acupuncture Health Centre 夏草堂"
             sx={{
               height: '50px',
               width: 'auto',

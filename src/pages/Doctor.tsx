@@ -28,7 +28,7 @@ const DoctorDetail: React.FC = () => {
   // Determine avatar based on index (Hack for Zen theme continuity)
   // In a real app, this should be in data.json
   const index = doctors.indexOf(doctor);
-  const avatarSrc = index === 0 ? '/images/zen-crane.png' : '/images/zen-deer.png';
+  const avatarSrc = index === 0 ? `${import.meta.env.BASE_URL}images/zen-crane.png` : `${import.meta.env.BASE_URL}images/zen-deer.png`;
 
   const MainContent = (
     <Box>

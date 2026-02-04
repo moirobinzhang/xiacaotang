@@ -27,10 +27,7 @@ const AboutUs: React.FC = () => {
         {t('nav.about')}
       </Typography>
 
-      {/* Mission */}
-      <Typography variant="h6" paragraph sx={{ fontStyle: 'italic', color: '#5d5d5d', marginBottom: '32px' }}>
-        {t('about.mission')}
-      </Typography>
+
 
       {/* Doctor List */}
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>

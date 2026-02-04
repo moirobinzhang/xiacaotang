@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Playfair Display', serif !important;
+  font-family: 'Playfair Display', "Noto Sans SC", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif !important;
   background-color: #f7f3e8 !important; /* 宣纸暖色 */
   color: #2c2c2c !important;
 
@@ -29,6 +29,24 @@ body {
   min-height: 100vh;
   background-color: #f7f3e8 !important;
   background-image: url('https://www.transparenttextures.com/patterns/ashen-paper.png') !important;
+  font-family: 'Playfair Display', "Noto Sans SC", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif !important;
+}
+
+/* Chinese Typography Optimization */
+:lang(zh) {
+  font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif !important;
+  line-height: 1.8 !important;
+}
+
+/* Forceful Spacing Reduction */
+.services-section {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.footer-section {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 /* 彻底禁用默认的黑白模式切换干扰 */ @media (prefers-color-scheme: light) { :root { background-color: #f7f3e8 !important; } }
@@ -42,7 +60,7 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-family: Playfair Display, serif;
+  font-family: 'Playfair Display', "Noto Sans SC", "Microsoft YaHei", sans-serif;
 }
 
 @media (prefers-color-scheme: light) {

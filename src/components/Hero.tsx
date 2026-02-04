@@ -139,11 +139,12 @@ const Hero: React.FC = () => {
             gutterBottom
             sx={{
               color: '#fdfaf5',
-              fontFamily: '"Playfair Display", serif',
+              fontFamily: '"Montserrat", "Roboto", "Helvetica Neue", sans-serif',
               fontWeight: 700,
               textShadow: '2px 2px 4px rgba(0,0,0,0.6)',
               marginBottom: '16px',
-              display: { xs: 'none', md: 'block' }
+              display: { xs: 'none', md: 'block' },
+              letterSpacing: '0.02em'
             }}
           >
             {t('brandName')}
@@ -156,12 +157,13 @@ const Hero: React.FC = () => {
             gutterBottom
             sx={{
               color: '#fdfaf5',
-              fontFamily: '"Playfair Display", serif',
+              fontFamily: '"Montserrat", "Roboto", "Helvetica Neue", sans-serif',
               fontWeight: 700,
               textShadow: '2px 2px 4px rgba(0,0,0,0.6)',
               marginBottom: '10px',
               display: { xs: 'block', md: 'none' },
-              fontSize: '1.5rem'
+              fontSize: '1.5rem',
+              letterSpacing: '0.02em'
             }}
           >
             {t('brandName')}
@@ -174,12 +176,12 @@ const Hero: React.FC = () => {
             gutterBottom
             sx={{
               color: '#fdfaf5',
-              fontFamily: '"Noto Sans SC", "Microsoft YaHei", sans-serif',
-              fontWeight: 400,
+              fontFamily: '"Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif',
+              fontWeight: 500, // Medium weight as requested
               letterSpacing: '0.05em',
               textShadow: '1px 1px 3px rgba(0,0,0,0.6)',
               marginBottom: { xs: '20px', md: '32px' },
-              lineHeight: 1.4,
+              lineHeight: 1.6,
               fontSize: { xs: '0.95rem', md: '1.5rem' }
             }}
           >
@@ -209,7 +211,8 @@ const Hero: React.FC = () => {
               '&:hover': {
                 backgroundColor: '#388E3C',
               },
-              fontFamily: '"Noto Sans SC", "Microsoft YaHei", sans-serif',
+              fontFamily: '"Montserrat", "Roboto", "Noto Sans SC", sans-serif',
+              fontWeight: 500
             }}
           >
             {getLocalizedValue(

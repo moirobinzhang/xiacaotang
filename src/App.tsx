@@ -11,6 +11,8 @@ import DoctorDetail from './pages/Doctor';
 import { getLanguage } from './i18n';
 
 
+import CanonicalLink from './components/CanonicalLink';
+
 const App: React.FC = () => {
 
   useEffect(() => {
@@ -30,6 +32,7 @@ const App: React.FC = () => {
     <Suspense fallback="Loading...">
       <Router>
         <MainLayout>
+          <CanonicalLink />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Typography, Box, List, ListItem, ListItemIcon, ListItemText, Divider, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
@@ -47,8 +48,19 @@ const ServiceDetail: React.FC = () => {
         );
     }
 
+    const pageTitle = isZh ? `${service.title.zh} | 夏草堂` : `${service.title.en} | Xia's Herbal & Acupuncture`;
+    const ogImage = service.image ? `${window.location.origin}${import.meta.env.BASE_URL}${service.image.startsWith('/') ? service.image.substring(1) : service.image}` : null;
+
     const mainContent = (
         <Box sx={{ marginBottom: 4 }}>
+            <Helmet>
+                <title>{pageTitle}</title>
+                <meta property="og:title" content={pageTitle} />
+                <meta property="og:url" content={window.location.href} />
+                {ogImage && <meta property="og:image" content={ogImage} />}
+                {/* Optional: Update description per service if data available */}
+            </Helmet>
+
             <Button
                 startIcon={<ArrowBackIcon />}
                 onClick={() => navigate('/services')}

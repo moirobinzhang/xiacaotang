@@ -6,7 +6,7 @@ const CanonicalLink: React.FC = () => {
     const location = useLocation();
     // Ensure no trailing slash unless it's root, but typically canonicals prefer consistency. 
     // We will append the pathname to the domain.
-    const canonicalUrl = `https://www.xiacaotang.com${location.pathname === '/' ? '' : location.pathname}`;
+    const canonicalUrl = `https://moirobinzhang.github.io/xiacaotang${location.pathname === '/' ? '' : location.pathname}`;
 
     return (
         <Helmet>

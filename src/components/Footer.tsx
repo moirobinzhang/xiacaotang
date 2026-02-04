@@ -1,8 +1,7 @@
 import React from 'react';
-import { Box, Typography, Grid, useTheme, Divider } from '@mui/material';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
+import { Box, Grid, Typography, Divider } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+// Icons removed per request
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import data from '../assets/data.json';

@@ -29,7 +29,7 @@ const ContactPage: React.FC = () => {
   const theme = useTheme();
 
   const position: [number, number] = [43.56519, -79.7009841];
-  const clinicName = "Xia's TCM Health Centre";
+  const clinicName = "夏草堂 XIA‘s TCM";
   const address = "1675 The Chase #24b, Mississauga, ON L5M 5Y7";
   const phone = "+1 905-848-1552";
 
@@ -87,7 +87,25 @@ const ContactPage: React.FC = () => {
                   {t('footer.addressTitle') || 'Address'}
                 </Typography>
                 <Typography variant="body1" sx={{ color: theme.palette.text.secondary }}>
-                  {address}
+                  <Box
+                    component="a"
+                    href="https://www.google.com/maps/search/?api=1&query=Xia%27s+Herbal+%26+Acupuncture+Health+Centre+Mississauga"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      color: 'inherit',
+                      textDecoration: 'none',
+                      transition: 'all 0.2s ease',
+                      borderBottom: '1px solid transparent',
+                      '&:hover': {
+                        color: theme.palette.primary.main,
+                        borderBottom: `1px solid ${theme.palette.primary.main}`,
+                        opacity: 0.8
+                      }
+                    }}
+                  >
+                    {address}
+                  </Box>
                 </Typography>
               </Box>
             </Box>
@@ -126,7 +144,7 @@ const ContactPage: React.FC = () => {
           <Button
             variant="outlined"
             color="primary"
-            href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`}
+            href="https://www.google.com/maps/search/?api=1&query=Xia%27s+Herbal+%26+Acupuncture+Health+Centre+Mississauga"
             target="_blank"
             rel="noopener noreferrer"
             sx={{

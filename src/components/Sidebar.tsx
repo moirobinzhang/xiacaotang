@@ -64,14 +64,25 @@ const Sidebar: React.FC = () => {
                 <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5, marginBottom: 2 }}>
                     <LocationOnIcon fontSize="small" sx={{ color: '#1a2f23', mt: 0.3 }} />
                     <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
-                        <a
-                            href="https://maps.google.com/?q=1675%20The%20Chase%20%2324b,%20Mississauga,%20ON%20L5M%205Y7"
+                        <Box
+                            component="a"
+                            href="https://www.google.com/maps/search/?api=1&query=Xia%27s+Herbal+%26+Acupuncture+Health+Centre+Mississauga"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ color: 'inherit', textDecoration: 'none' }}
+                            sx={{
+                                color: 'inherit',
+                                textDecoration: 'none',
+                                transition: 'all 0.2s ease',
+                                borderBottom: '1px solid transparent',
+                                '&:hover': {
+                                    color: '#1a2f23',
+                                    borderBottom: '1px solid #1a2f23',
+                                    opacity: 0.8
+                                }
+                            }}
                         >
                             {clinic.address}
-                        </a>
+                        </Box>
                     </Typography>
                 </Box>
 

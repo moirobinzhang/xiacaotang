@@ -89,14 +89,25 @@ const Footer: React.FC = () => {
                 textAlign: { xs: 'center', sm: 'left' },
                 display: 'block'
               }}>
-                <a
-                  href="https://maps.google.com/?q=1675%20The%20Chase%20%2324b,%20Mississauga,%20ON%20L5M%205Y7"
+                <Box
+                  component="a"
+                  href="https://www.google.com/maps/search/?api=1&query=Xia%27s+Herbal+%26+Acupuncture+Health+Centre+Mississauga"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: 'inherit', textDecoration: 'none' }}
+                  sx={{
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    transition: 'all 0.2s ease',
+                    borderBottom: '1px solid transparent',
+                    '&:hover': {
+                      color: theme.palette.primary.main, // Use primary color for ink-like effect or secondary for gold
+                      borderBottom: `1px solid ${theme.palette.primary.main}`,
+                      opacity: 0.8
+                    }
+                  }}
                 >
                   {clinic.address}
-                </a>
+                </Box>
               </Typography>
             </Box>
 
@@ -173,7 +184,7 @@ const Footer: React.FC = () => {
       <Typography variant="body2" align="center" sx={{ color: 'rgba(44, 44, 44, 0.6)', fontFamily: 'Playfair Display, serif' }}>
         {t('footer.copyright')}
       </Typography>
-    </Box>
+    </Box >
   );
 };
 

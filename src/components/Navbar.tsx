@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
           <Box
             component="img"
             src={`${import.meta.env.BASE_URL}images/logo-enso-optimized.png`}
-            alt="Xia's Herbal & Acupuncture Health Centre 夏草堂"
+            alt="夏草堂 XIA‘s TCM"
             width="50"
             height="50"
             sx={{

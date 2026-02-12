@@ -1,0 +1,1 @@
+import{j as s,B as e,p as t}from"./index-be84ee1b.js";const a=()=>s.jsxs(e,{children:[s.jsx(t,{variant:"h4",children:"Testimonials"}),s.jsx(t,{children:"See what our patients have to say."})]}),o=()=>s.jsx(a,{});export{o as default};

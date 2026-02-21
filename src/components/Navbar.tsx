@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
         <Box component={Link} to="/" sx={{ display: 'flex', alignItems: 'center', gap: 2, textDecoration: 'none' }}>
           <Box
             component="img"
-            src={`${import.meta.env.BASE_URL}images/logo-enso-optimized.png`}
+            src={`${import.meta.env.BASE_URL}images/logo-enso-optimized.webp`}
             alt="夏草堂 XIA‘s TCM"
             width="50"
             height="50"

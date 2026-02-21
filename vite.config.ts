@@ -5,5 +5,5 @@ import viteCompression from 'vite-plugin-compression';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), viteCompression()],
-  base: '/xiacaotang/', // 这里必须和你的仓库名一致
+  base: '/', // 这里必须和你的仓库名一致
 })

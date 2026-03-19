@@ -29,7 +29,7 @@ const ServicesPage: React.FC = () => {
       </Typography>
 
       <Grid container spacing={4}>
-        {data.services.map((service, index) => (
+        {data.services.map((service: any, index) => (
           <Grid item xs={12} key={index}>
             <Card sx={{
               backgroundColor: 'transparent',

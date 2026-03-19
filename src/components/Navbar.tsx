@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const navItems = ['home', 'about', 'services', 'testimonials', 'contact'];
+  const navItems = ['home', 'about', /* 'services', */ 'testimonials', 'contact'];
 
   const drawer = (
     <Box onClick={toggleMobileMenu} sx={{ textAlign: 'center', backgroundColor: theme.palette.background.default, height: '100%' }}>

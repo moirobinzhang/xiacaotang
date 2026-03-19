@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getLocalizedValue } from '../i18n';
 import rawData from '../assets/data.json';
@@ -11,7 +11,6 @@ interface CarouselImage {
   mobileUrl: string;
   alt: { en: string; zh: string };
   description: { en: string; zh: string };
-  servicename?: string;
 }
 
 interface DataStructure {
@@ -21,23 +20,21 @@ interface DataStructure {
 
 const data: DataStructure = {
   en: {
-    carouselImages: rawData.carouselImages.map((image, index) => ({
+    carouselImages: rawData.carouselImages.map((image) => ({
       ...image,
       url: `${import.meta.env.BASE_URL}${image.url.startsWith('/') ? image.url.substring(1) : image.url}`,
       mobileUrl: `${import.meta.env.BASE_URL}${image.url.startsWith('/') ? image.url.substring(1).replace(/(\.[\w\d_-]+)$/i, '-mobile$1') : image.url.replace(/(\.[\w\d_-]+)$/i, '-mobile$1')}`,
       description: image.description,
-      alt: image.alt,
-      servicename: rawData.services[index % rawData.services.length]?.id || 'acupuncture'
+      alt: image.alt
     })),
   },
   zh: {
-    carouselImages: rawData.carouselImages.map((image, index) => ({
+    carouselImages: rawData.carouselImages.map((image) => ({
       ...image,
       url: `${import.meta.env.BASE_URL}${image.url.startsWith('/') ? image.url.substring(1) : image.url}`,
       mobileUrl: `${import.meta.env.BASE_URL}${image.url.startsWith('/') ? image.url.substring(1).replace(/(\.[\w\d_-]+)$/i, '-mobile$1') : image.url.replace(/(\.[\w\d_-]+)$/i, '-mobile$1')}`,
       description: image.description,
-      alt: image.alt,
-      servicename: rawData.services[index % rawData.services.length]?.id || 'acupuncture'
+      alt: image.alt
     })),
   },
 };
@@ -211,7 +208,7 @@ const Hero: React.FC = () => {
             )}
           </Typography>
 
-          {/* Button */}
+          {/* Button - disabled during Services removal
           <Button
             component={Link}
             to="/services"
@@ -240,6 +237,7 @@ const Hero: React.FC = () => {
               currentLang
             )}
           </Button>
+          */}
         </Box>
       </Box>
     </Box>

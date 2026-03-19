@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import Hero from '../components/Hero';
-import ServicesSection from '../components/ServicesSection';
+// import ServicesSection from '../components/ServicesSection';
 
 const HomePage: React.FC = () => {
 
@@ -9,7 +9,7 @@ const HomePage: React.FC = () => {
     <Box>
       <Hero />
 
-      <ServicesSection />
+      {/* <ServicesSection /> */}
     </Box>
   );
 };
